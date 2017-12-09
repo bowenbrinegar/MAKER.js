@@ -3,7 +3,8 @@ module.exports = function (sequelize, DataTypes) {
 		product: DataTypes.STRING,
 		parts: DataTypes.JSON,
 		price: DataTypes.STRING,
-		cost: DataTypes.STRING
+		cost: DataTypes.STRING,
+		description: DataTypes.TEXT
 	});
 
 	Products.associate = models => {

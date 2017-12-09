@@ -14,35 +14,6 @@ body {
 }
 
 
-/*survey to create maker*/
-
-.btn-green {
-  background-color: #1ab394;
-  color: #fff;
-  border-radius: 3px;
-}
-.btn-green:hover, .btn-green:focus {
-    background-color: #18a689;
-    color: #fff;
-}
-.panel-footer {
-    padding: 0 15px;
-    border:none;
-    text-align: right;
-    background-color: #fff;
-}
-
-#surveyElement {
-	position: relative;
-	color: white;
-	width: 100%;
-  background: rgba(0,0,0,.5);
-	-webkit-transform: translate(-50%, 0);
-	left: 50%;
-	top: 0;
-}
-
-
 /*header css*/
 
 
@@ -227,7 +198,7 @@ body {
   transition: 5s;
 }
 
-/*toolbox parts masonry render grid item (addProduct2.js)*/
+/*toolbox parts masonry render grid item (addProduct.js)*/
 
 .parts-item {
   width: 15%;
@@ -265,31 +236,85 @@ body {
 
 /*input elements for build it, make it form (form.html)*/
 
-.inputElement {
-   border-radius: 5px;
-   width: 200px;
-   margin: 20px 5px;
-   border: 2px solid black;
-   padding: 5px;
-   font-family: 'Shrikhand', cursive ;
+/*survey to create maker*/
 
+#surveyElement {
+  position: relative;
+  color: white;
+  font-family: 'Righteous', cursive;
+  width: 100%;
+  background: rgba(0,0,0,.5);
+  -webkit-transform: translate(-50%, 0);
+  left: 50%;
+  top: 0;
 }
 
-.buildIt {
-  background: red;
-  color: white;
+#next, #previous{
+  background: rgb(84, 237, 211);
+  color: black;
+  font-size: 20px;
   height: 80px;
   width: 120px;
+  border: none;
   margin: 20px 0px 0px 40px;
   font-family: 'Shrikhand', cursive ;
 }
 
+#next {
+  float: right;
+  margin: 20px 45px 0px 0px;
+}
+
+#previous {
+  position: absolute;
+  bottom: 4%;
+  left: -2%;
+}
+
+.completeButton {
+  font-size: 20px;
+  background: rgb(247, 114, 114);
+  margin: 20px;
+  height: 80px;
+  width: 120px;
+  border: none;
+  font-family: 'Shrikhand', cursive; 
+}
+.panel-footer {
+  padding: 0 15px;
+  border:none;
+  text-align: right;
+  background: none;
+}
 
 /*table styles (inventory.html)*/
 
 th, td {
-    border-bottom: 1px solid black;
+    font-family: 'Ubuntu', sans-serif;
+    border-bottom: 2px solid;
+    border-color: rgba(0,0,0,.3);
 }
 
+th {
+  font-size: 20px;
+  border-bottom: 2px solid !important;
+  border-color: rgba(0,0,0,.3) !important;
+}
+
+.glyphicon {
+  font-size: 25px;
+}
+
+.glyphicon-plus {
+  color: green;
+}
+
+.glyphicon-remove {
+  color: red;
+}
+
+.glyphicon:hover {
+  color: rgba(0,0,0,.5);
+}
 
 
