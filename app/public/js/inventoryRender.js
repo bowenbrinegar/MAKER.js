@@ -52,15 +52,17 @@ $(document).ready(function() {
 		for (var i=0; i < temp.length - 1; i++) {
 			arr.push(temp[i].textContent);
 		}
+
 		arr.push(temp.eq(0).attr("data-id"))
 		var partsARR = arr[1].split(",")
 		var obj = {
 			product: arr[0],
-			parts: partsARR,
+			description: arr[1],
 			price: arr[2],
 			cost: arr[3],
 			id: arr[5]
 		}
+		
 		$.ajax({
 			method: "PUT",
 			url: "/inventory/update",

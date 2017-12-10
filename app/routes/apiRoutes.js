@@ -43,10 +43,9 @@ module.exports = function(app) {
 	});
 
 	app.put("/inventory/update", function(req, res) {
-		console.log(req.body)
 		db.Products.update({ 
 			product: req.body.product,
-			parts: {parts: req.body.parts},
+			description: req.body.description,
 			price: req.body.price,
 			cost: req.body.cost },
       { where: {id: req.body.id} }
