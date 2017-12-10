@@ -34,21 +34,44 @@ $(document).ready(function() {
 	$('.parts-item').on("click", function() {
 		if ($(this).children().eq(1).css("display") == "block") {
 			$(this).children().eq(1).toggle();
+			$(this).data("data-selected", false)
+			console.log($(this).data())
 			for(var i=0; i < partsARR.length; i++) {
 				if (partsARR[i] === $(this).attr('data-tool')) {
 					partsARR.splice(i, 1);
 				} 
 			}
+			nextValidator()
 			return
 		} 
 
+		$(this).data("data-selected", true)
+		console.log($(this).data())
 		$(this).children().eq(1).toggle();
 		partsARR.push($(this).attr('data-tool'))
+		nextValidator()
 	});
+
+
+	function nextValidator() {
+		let count = 0;
+		let temp = $('#partsGrid').children()
+		for (var i=0; i < temp.length; i++) {
+			if (temp.eq([i]).data().dataSelected == true) {
+				count++;
+				if (count > 4) {
+					$('#next').show()
+				} else {
+					$('#next').hide()
+				}
+			}
+		}
+	}
 
 
 	$('#surveyElement').hide()
 	$('#previous').hide()
+	$('#next').hide()
 
 	$('#next').on("click", function() {
 		$('#partsGrid').hide()
