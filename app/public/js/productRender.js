@@ -32,7 +32,3 @@ function renderCards(data) {
 		$('#grid').masonry( 'prepended', item  );
 	}
 }
-
-
-
-	
