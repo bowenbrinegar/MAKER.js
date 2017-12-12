@@ -408,4 +408,18 @@ th {
   color: rgba(0,0,0,.5);
 }
 
+/* default full-width cells */
+.carousel-cell {
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+}
 
+@media screen and ( min-width: 768px ) {
+   /*half-width cells for larger devices*/ 
+  .carousel-cell { width: 50%; }
+}
+
+.pull-right {
+  float: right !important;
+}

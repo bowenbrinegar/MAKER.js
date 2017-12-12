@@ -3,28 +3,85 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Welcome</title>
-
+	<!-- bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
+	
+	<!-- flickity -->
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<!-- link to css -->
 	<link rel='stylesheet' type='text/css' href='css/style.css'>
 
 </head>
 <body>
 
-	<div class=container>
+	<div id=header>
+		<a href='/' id='logo'>Maker.js</a>
+		
+		<div class="dropdown pull-right">
+  			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    		Dropdown
+    			<span class="caret"></span>
+  			</button>
+  				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    				<li><a href="#">Action</a></li>
+    				<li><a href="#">Another action</a></li>
+    				<li><a href="#">Something else here</a></li>
+    				<li role="separator" class="divider"></li>
+    				<li><a href="#">Separated link</a></li>
+  				</ul>
+		</div>
+	</div>
+
+	<br>
+
+	<!-- flickity carousel -->
+	<div class="main-carousel" data-flickity='{ "cellAlign": "left", "wrapAround": true, "autoPlay": true }'>
+		<div class="carousel-cell"><img src="http://amppob.com/wp-content/uploads/2016/05/MakersManual-KeyTakeaways11603_n.jpg" alt="" height="400" width=""></div>
+		<div class="carousel-cell"><img src="http://www.carpentrybyrob.com/img/carpentry%20by%20rob.jpg" alt="carpentry" height="400"></div>
+		<div class="carousel-cell"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Claw-hammer.jpg/1200px-Claw-hammer.jpg" alt="hammer" height="400"></div>
+		<div class="carousel-cell"><img src="https://i.ytimg.com/vi/siNjF3vuUMU/maxresdefault.jpg" alt="arcade" height="400"></div>
+  		
+	</div>
+
+	<br>
+	<div class="row">
+		<div class="col-lg-3">
+			<ul id='menu'>
+				<li><a href='/market'><span>Market</span></a></li>
+				<li><a href='/form'><span>Maker Space</span></a></li>
+				<li><a href='/inventory'><span>Inventory</span></a></li>
+			</ul>
+		</div>
+
+		<div class="col-lg-9">
+			<div class="panel panel-default">
+  				<div class="panel-heading">
+    				<h3 class="panel-title">Welcome to Maker.JS</h3>
+  				</div>
+  				<div class="panel-body">
+    			Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+  				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+	<!-- <div class=container>
 		<div class="jumbotron">
 		  <h1 class="display-3">Welcome to Maker!</h1>
 		  <p class="lead">This is the best place to make, collab, buy, and sell!</p>
-		  <hr class="my-4">
-		  <p class="lead">
+		  <hr class="my-4"> -->
+		  <!-- <p class="lead">
 		    <a class="btn btn-primary btn-lg" href="/form" role="button">Make Something</a>
 		    <a class="btn btn-primary btn-lg" href="/market" role="button">Go to Market</a>
-		  </p>
-		  <div id='creatorBox'>
+		  </p> -->
+		  <!-- <div id='creatorBox'>
   			<div id='searchWrapper'>
   				<label for="category">Submit Creator:</label>
 	    		<input id='inputer' type='textbox'>
@@ -36,7 +93,7 @@
 	    	</div>
     	</div>
 		</div>
-	</div>
+	</div> -->
 
 	<script type='text/javascript' src='js/indexAjax.js'></script>
 	
