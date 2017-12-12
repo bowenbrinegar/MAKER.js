@@ -9,10 +9,15 @@ $('#grid').on("click", '.grid-item', function() {
 
 
 function renderModal(data) {
+	$('#contentContainer').empty()
 	$('#background').css('display', 'block')
 	var source   = document.getElementById("entry-template").innerHTML;
 	var template = Handlebars.compile(source);
 	var context = data
 	var html    = template(context);
-	$('#modal').append(html)
+	$('#contentContainer').append(html)
 }
+
+$('.closeModal').on("click", function() {
+	$('#background').css('display', 'none')
+})
