@@ -21,7 +21,6 @@ body {
 
 #header {
   position: absolute;
-  margin: auto;
   height: 80px;
   right: 0;
   left: 0;
@@ -196,6 +195,31 @@ body {
 .productBox:hover #slideUp{
   display: block;
   transition: 5s;
+}
+
+
+
+/*product modal*/
+
+#background {
+  display: none;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.3);
+}
+
+#modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  height: 500px;
+  width: 700px;
+  background: rgba(255,255,255,1);
 }
 
 /*toolbox parts masonry render grid item (addProduct.js)*/

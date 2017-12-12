@@ -22,12 +22,11 @@ $('#grid').masonry({
 // doug product cards
 // render products
 function renderCards(data) {
-	console.log(data)
 	for (var i=0; i < data.length; i++) {
 		var text = $(`<h1>${data[i].product}</h1>`)
 		var slideU = $("<div id='slideUp'>").append(text)
 		var pBox = $('<div>').addClass("productBox").append(slideU)
-		var item = $('<div>').addClass("grid-item").append(pBox)
+		var item = $(`<div data-id='${data[i].id}'>`).addClass("grid-item").append(pBox)
 		$('#grid').prepend( item )
 		$('#grid').masonry( 'prepended', item  );
 	}
