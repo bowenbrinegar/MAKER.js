@@ -1,9 +1,14 @@
 var db = require("./../models");
-var userID;
-
 
 module.exports = function(app) {
 	
+	app.get('/modal/send/:id', function(req, res) {
+		db.Products.findOne({ 
+			where: {id: req.params.id} 
+		}).then(data => {
+			res.send(data.dataValues)
+		})
+	})
 
 	app.get("/market/send", function(req, res) {
 		db.Products.findAll().then(data => {
