@@ -123,3 +123,13 @@
   bottom: -4px;
   background-image: -webkit-linear-gradient(right, transparent 0%, rgba(0,0,0,.4) 100%);
 }
+
+footer {
+  color: white;
+  text-align: center;
+  height: 80px;
+  right: 0;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,.75);
+}
