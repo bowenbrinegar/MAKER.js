@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "test",
+    "username": "maker_project",
+    "password": "testTESTtest",
     "database": "maker",
-    "host": "127.0.0.1",
+    "host": "makerjs.c0hpq4rv3joj.us-east-2.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {

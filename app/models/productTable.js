@@ -1,9 +1,8 @@
 module.exports = function (sequelize, DataTypes) {
 	var Products = sequelize.define("Products", {
 		product: DataTypes.STRING,
-		parts: DataTypes.JSON,
-		price: DataTypes.STRING,
-		cost: DataTypes.STRING,
+		price: DataTypes.INTEGER,
+		cost: DataTypes.INTEGER,
 		description: DataTypes.TEXT
 	});
 
