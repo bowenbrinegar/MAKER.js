@@ -70,10 +70,57 @@ Survey.defaultBootstrapCss.navigationButton = "completeButton";
 var json = {
     pages: [
         { questions: [ 
-            { type:"text", name:"object", title: "What do you want to make?", placeHolder:"Be creative", isRequired: true},
-            { type: "comment", name: "description", title: "Add a description", placeHolder: "Be Creative", isRequired: true},
-            { type:"text", name:"price", title: "How much will you sell it for?", placeHolder:"Be creative", isRequired: true},
-            { type:"text", name:"cost", title: "How much will it cost you to make", placeHolder:"Be creative", isRequired: true} 
+            { type:"text", 
+              name:"object",
+              title: "What do you want to make?",
+              placeHolder:"Be creative",
+              isRequired: true,
+              validators: [
+              			{
+              				type:"text",
+              				minLength: 1,
+              				maxLength: 20
+              			}
+              		]
+          },
+            { type: "comment",
+              name: "description",
+              title: "Add a description",
+              placeHolder: "Be Creative",
+              isRequired: true,
+              validators: [
+              			{
+              				type:"text",
+              				minLength: 1
+              			}
+              		]
+          },
+            { type:"text",
+              name:"price",
+              title: "How much will you sell it for?",
+              placeHolder:"Input a dollor Amount",
+              isRequired: true,
+              validators: [
+                        {
+                            type: "numeric",
+                            minValue: 0,
+                            maxValue: 1000000
+                        }
+                    ]
+                },
+            { type:"text",
+              name:"cost",
+              title: "How much will it cost you to make",
+              placeHolder:"Input a dollor Amount",
+              isRequired: true,
+              validators: [
+                        {
+                            type: "numeric",
+                            minValue: 0,
+                            maxValue: 1000000
+                        }
+                    ]
+          } 
         ]}
     ]
 };
