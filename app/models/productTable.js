@@ -8,10 +8,6 @@ module.exports = function (sequelize, DataTypes) {
               	},
 		parts: {
 			type: DataTypes.JSON,
-		    validate: {
-              				isAlpha: true,
-              				min: 1
-              			}
               	},
 		price: {
 			type: DataTypes.STRING,
