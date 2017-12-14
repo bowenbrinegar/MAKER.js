@@ -31,7 +31,13 @@ module.exports = function (sequelize, DataTypes) {
               				min: 1
               			}
               	},
-            });
+    imgUrl: {
+      type: DataTypes.STRING,
+      validate: {
+        isUrl: true
+      }
+    },
+ });
 
 	Products.associate = models => {
     models.Products.belongsTo(models.Users, {

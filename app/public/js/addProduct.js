@@ -95,6 +95,13 @@ var json = {
               			}
               		]
           },
+          { type: "text",
+            inputType: "url",
+              name: "imgUrl",
+              title: "Image Url",
+              placeHolder: "Img URL",
+              isRequired: true,
+          },
             { type:"text",
               name:"price",
               title: "How much will you sell it for?",
@@ -133,7 +140,8 @@ var json = {
 				description: data.valuesHash.description,
 				parts: partsARR,
 				price: data.valuesHash.price,
-				cost: data.valuesHash.cost
+				cost: data.valuesHash.cost,
+				imgUrl: data.valuesHash.imgUrl
 			}
 
 	    $.ajax("/submit/project", {

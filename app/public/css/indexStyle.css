@@ -24,7 +24,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
 
 #header {
-  /*position: absolute;*/
+  position: relative;
   height: 80px;
   right: 0;
   left: 0;
@@ -133,6 +133,81 @@
 #infoPanel {
   margin-top: 40px;
 }
+
+
+
+
+/*login modal*/
+.userClick {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  -webkit-transform: translate(0%,-50%);
+}
+
+#loginModal {
+  display: none;
+  position: absolute;
+  margin: auto;
+  height: 500px;
+  width: 600px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  background: white;
+  -webkit-box-shadow: -1px 13px 98px 6px rgba(0,0,0,0.75);
+}
+
+#buttonContainer {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 98px;
+  background: rgba(255,255,255,.5);
+}
+
+#buttonContainer > div {
+  float: left;
+  width: 50%;
+  height: 98px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 90px;
+}
+
+#buttonContainer > div:hover {
+  box-shadow: inset 0 -10px 20px -10px rgba(0,0,0,0.75);
+}
+
+
+#formContainer {
+  position: absolute;
+  top: 98px;
+  width: 100%;
+}
+
+.form-group > input {
+  margin: 30px;
+  width: 90%;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+#registerHtml > input {
+  border-radius: 0px;
+}
+
+#loginHtml > button {
+  border-radius: 0px;
+}
+
+
+
+
+
 
 /*footer css*/
 
