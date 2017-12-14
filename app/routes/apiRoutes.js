@@ -41,7 +41,8 @@ module.exports = function(app) {
 			parts: {parts: req.body.parts},
 			price: req.body.price,
 			cost: req.body.cost,
-			description: req.body.description
+			description: req.body.description,
+			imgUrl: req.body.imgUrl
 		});
 
 		res.status(200).end();
