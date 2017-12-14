@@ -1,3 +1,5 @@
+var turn = true
+
 var loginHtml = `
 				<form id='loginHtml' action="/login" method="POST">
           <div class="form-group">
@@ -25,16 +27,8 @@ var registerHtml = `
         </form>`
 
 
-$('#formContainer').append(registerHtml)
-$('#registerButton').css({"background": "rgba(0,0,0,.75)", "color": "white"})  
-$('#loginButton').css({"background": "rgb(84, 237, 211)"})
-$("#loginButton").hover(function(){
-	  $(this).addClass('hover');
-	}, function(){
-	  $(this).removeClass('hover');
-	});
+registerRender()
 
-var turn = true
 $('.userClick').on("click", function() {
 	if (turn) {
 		$('#loginModal').css("display", "block");
@@ -46,21 +40,15 @@ $('.userClick').on("click", function() {
 })
 	
 $('#loginButton').on("click", function() {
-	$('#loginButton').off( "mouseenter mouseleave" );
-	$('#formContainer').empty()
-	$('#formContainer').append(loginHtml)
-	$('#registerButton').css({"background": "rgb(84, 237, 211)"})
-	$('#loginButton').css({"background": "rgba(0,0,0,.75)", "color": "white"}) 
-	$('#loginModal').css({"height": "348px"})
-	$("#registerButton").hover(function(){
-	  $(this).addClass('hover');
-	}, function(){
-	  $(this).removeClass('hover');
-	});
+	loginRender()
 })
 
 $('#registerButton').on("click", function() {
-	$('#registerButton').off( "mouseenter mouseleave" );
+	registerRender()
+})  
+
+
+function registerRender() {
 	$('#formContainer').empty()
 	$('#formContainer').append(registerHtml)
 	$('#registerButton').css({"background": "rgba(0,0,0,.75)", "color": "white"})  
@@ -71,7 +59,25 @@ $('#registerButton').on("click", function() {
 	}, function(){
 	  $(this).removeClass('hover');
 	});
-})  
+	$('#registerButton').off('mouseenter mouseleave')
+	$('#registerButton').removeClass('hover');
+}
+
+function loginRender() {
+	$('#formContainer').empty()
+	$('#formContainer').append(loginHtml)
+	$('#registerButton').css({"background": "rgb(84, 237, 211)"})
+	$('#loginButton').css({"background": "rgba(0,0,0,.75)", "color": "white"}) 
+	$('#loginModal').css({"height": "348px"})
+	$("#registerButton").hover(function(){
+	  $(this).addClass('hover');
+	}, function(){
+	  $(this).removeClass('hover');
+	});
+	$('#loginButton').off('mouseenter mouseleave')
+	$('#loginButton').removeClass('hover');
+}
+
 
 
 
