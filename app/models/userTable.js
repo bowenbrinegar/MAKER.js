@@ -1,6 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
   var Users = sequelize.define("Users", {
-    name: DataTypes.STRING
+    name: {
+    	type: DataTypes.STRING,
+    	validate: {
+    		notEmpty: true,
+    		len: [2,30]
+    	}
+    } 
   });
 
   Users.associate = models => {
