@@ -1,3 +1,5 @@
+var turn = true
+
 var loginHtml = `
 				<form id='loginHtml' action="/login" method="POST">
           <div class="form-group">
@@ -8,10 +10,6 @@ var loginHtml = `
           </div>
           <button type="submit" class="btn btn-lg btn-block btn-warning">Log In -></button>
         </form>`
-
-
-
-
 
 var registerHtml = `
 				<form id='registerHtml' action="/register" method="post">
@@ -29,11 +27,8 @@ var registerHtml = `
         </form>`
 
 
-$('#formContainer').append(registerHtml)
-$('#registerButton').css({"background": "rgba(0,0,0,.75)", "color": "white"})  
-$('#loginButton').css({"background": "rgb(84, 237, 211)"})
+registerRender()
 
-var turn = true
 $('.userClick').on("click", function() {
 	if (turn) {
 		$('#loginModal').css("display", "block");
@@ -44,31 +39,45 @@ $('.userClick').on("click", function() {
 	turn = !turn;
 })
 	
-
-
 $('#loginButton').on("click", function() {
-	$('#formContainer').empty()
-	$('#formContainer').append(loginHtml)
-	$('#registerButton').css({
-		"background": "rgb(84, 237, 211)"})
-	$('#loginButton').css({
-		"background": "rgba(0,0,0,.75)",
-		"color": "white"}) 
-	$('#loginModal').css({
-		"height": "348px"
-	})
-
+	loginRender()
 })
 
 $('#registerButton').on("click", function() {
+	registerRender()
+})  
+
+
+function registerRender() {
 	$('#formContainer').empty()
 	$('#formContainer').append(registerHtml)
 	$('#registerButton').css({"background": "rgba(0,0,0,.75)", "color": "white"})  
 	$('#loginButton').css({"background": "rgb(84, 237, 211)"}) 
-	 $('#loginModal').css({
-	 	"height": "500px"
-	 })
-})  
+	$('#loginModal').css({"height": "500px"})
+	$("#loginButton").hover(function(){
+	  $(this).addClass('hover');
+	}, function(){
+	  $(this).removeClass('hover');
+	});
+	$('#registerButton').off('mouseenter mouseleave')
+	$('#registerButton').removeClass('hover');
+}
+
+function loginRender() {
+	$('#formContainer').empty()
+	$('#formContainer').append(loginHtml)
+	$('#registerButton').css({"background": "rgb(84, 237, 211)"})
+	$('#loginButton').css({"background": "rgba(0,0,0,.75)", "color": "white"}) 
+	$('#loginModal').css({"height": "348px"})
+	$("#registerButton").hover(function(){
+	  $(this).addClass('hover');
+	}, function(){
+	  $(this).removeClass('hover');
+	});
+	$('#loginButton').off('mouseenter mouseleave')
+	$('#loginButton').removeClass('hover');
+}
+
 
 
 

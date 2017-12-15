@@ -178,7 +178,7 @@
   line-height: 90px;
 }
 
-#buttonContainer > div:hover {
+.hover {
   box-shadow: inset 0 -10px 20px -10px rgba(0,0,0,0.75);
 }
 
