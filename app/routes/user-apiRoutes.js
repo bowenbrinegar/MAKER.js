@@ -8,9 +8,7 @@ module.exports = (app, passport) => {
   app.post('/login',
     passport.authenticate('login', {
       failureRedirect: '/login',
-      failureFlash: 'Failed Login!',
-      successRedirect: '/protected',
-      successFlash: 'You are now logged in!'
+      successRedirect: '/protected'
     })
   );
 
@@ -19,13 +17,11 @@ module.exports = (app, passport) => {
   // 1. Validate the registration data
   // 2. Register the user
   // 3. Log in the user after registration
-  app.post('/register',
+  app.post('/register', 
     userController.validateRegister,
     passport.authenticate('local-signup', {
       failureRedirect: '/register',
-      failureFlash: 'Failed Login!',
-      successRedirect: '/protected',
-      successFlash: 'You are now logged in!'
+      successRedirect: '/protected'
     })
   );
 

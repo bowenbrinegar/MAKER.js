@@ -28,6 +28,8 @@ module.exports = (passport, user) => {
               null);
         };
 
+        console.log('finding one of email ... ', email);
+
         User.findOne({
           where: {
               email: email

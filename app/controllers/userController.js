@@ -45,52 +45,52 @@ exports.validateRegister = (req, res, next) => {
   next(); // There were no errors
 };
 
-exports.register = (req, res, next) => {
-  console.log('register has begun');
+// exports.register = (req, res, next) => {
+//   console.log('register has begun');
   
-  const generateHash = function(password) {
-    return bCrypt.hashSync(
-        password,
-        bCrypt.genSaltSync(10),
-        null);
-  };
+//   const generateHash = function(password) {
+//     return bCrypt.hashSync(
+//         password,
+//         bCrypt.genSaltSync(10),
+//         null);
+//   };
   
-  User.findOne({
-    where: {
-        email: req.body.email
-    }
-  }).then( function(user) {
+//   User.findOne({
+//     where: {
+//         email: req.body.email
+//     }
+//   }).then( function(user) {
          
-    if (user) {
-        console.log('User exists with name', user.name);
-        console.log('password', user.password);
-      return done(null, false, {
-        message: 'That email is already taken'
-      });
-    } else {
-        let userPassword = generateHash(req.body.password);
-        console.log('new user password', userPassword);
+//     if (user) {
+//         console.log('User exists with name', user.name);
+//         console.log('password', user.password);
+//       return done(null, false, {
+//         message: 'That email is already taken'
+//       });
+//     } else {
+//         let userPassword = generateHash(req.body.password);
+//         console.log('new user password', userPassword);
         
-        let data = {
-          email: req.body.email,
-          password: userPassword,
-          name: req.body.name
-        };
+//         let data = {
+//           email: req.body.email,
+//           password: userPassword,
+//           name: req.body.name
+//         };
          
-        User.create(data)
-        .then(function(newUser, created) {
-          if (!newUser) {
-            // return done(null, false);
-            next();
-          }
-          if (newUser) {
-            // return done(null, newUser);
-            next();
-          }
-        });
-      }
-    });
-};
+//         User.create(data)
+//         .then(function(newUser, created) {
+//           if (!newUser) {
+//             // return done(null, false);
+//             next();
+//           }
+//           if (newUser) {
+//             // return done(null, newUser);
+//             next();
+//           }
+//         });
+//       }
+//     });
+// };
 
 exports.protected = (req, res) => {
   res.sendFile(path.join(__dirname, '../public/protected.html'));
