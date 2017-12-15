@@ -1,26 +1,25 @@
-var express = require("express");
-var bodyParser = require("body-parser");
 
-var app = express();
-var PORT = process.env.PORT || 8080;
+const express = require('express');
+const bodyParser = require('body-parser');
 
-var db = require("./app/models");
+const app = express();
+const PORT = process.env.PORT || 8080;
+
+const db = require('./app/models');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
-app.use(express.static("./app/public"));
+app.use(express.static('public'));
 
-require("./app/routes/apiRoutes.js")(app);
-require("./app/routes/htmlRoutes.js")(app);
+require('./app/routes/apiRoutes')(app);
+require('./app/routes/htmlRoutes')(app);
+require('./app/routes/user-apiRoutes')(app);
 
-db.sequelize.sync({force: true}).then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+db.sequelize.sync().then( () => {
+  app.listen(PORT, () => {
+    console.log('App listening on PORT ' + PORT);
   });
 });
-
-
-module.exports = app;

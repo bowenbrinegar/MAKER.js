@@ -21,13 +21,15 @@ body {
 
 #header {
   position: absolute;
-  margin: auto;
   height: 80px;
   right: 0;
   left: 0;
   top: 0;
   background: rgba(0,0,0,.75);
-  margin: 0px 0px 40px 0px;
+  margin: 0px auto 100px;
+  display: flex;
+  justify-content: flex-end;
+  outline: 1px dotted red;
 }
 
 #logo {
@@ -79,20 +81,20 @@ body {
   text-decoration: none;
   position: relative;
   z-index: 1;
-  text-shadow: 
-    1px 1px 0px #FFF, 
+  text-shadow:
+    1px 1px 0px #FFF,
     2px 2px 0px #999,
     3px 3px 0px #FFF;
   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.05) 100%);
   -webkit-transition: 1s all;
-  background-image: -webkit-linear-gradient(left top, 
-    transparent 0%, transparent 25%, 
-    rgba(0,0,0,.15) 25%, rgba(0,0,0,.15) 50%, 
-    transparent 50%, transparent 75%, 
+  background-image: -webkit-linear-gradient(left top,
+    transparent 0%, transparent 25%,
+    rgba(0,0,0,.15) 25%, rgba(0,0,0,.15) 50%,
+    transparent 50%, transparent 75%,
     rgba(0,0,0,.15) 75%);
   background-size: 4px 4px;
-  box-shadow: 
-    0 0 0 1px rgba(0,0,0,.4) inset, 
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,.4) inset,
     0 0 20px -5px rgba(0,0,0,.4),
     0 0 0px 3px #FFF inset;
 }
@@ -114,13 +116,34 @@ body {
 #menu li:after {
   background-image: -webkit-linear-gradient(left, transparent 0%, rgba(0,0,0,.4) 100%);
   right: 0;
-  top: -4px; 
+  top: -4px;
 }
 #menu li:before {
   left: 0;
   bottom: -4px;
   background-image: -webkit-linear-gradient(right, transparent 0%, rgba(0,0,0,.4) 100%);
 }
+
+.nav__section {
+  /*list-style-type: none;*/
+}
+
+.nav__section--user {
+
+}
+
+.nav__item {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  display: inline;
+}
+
+
+.nav_link
 
 
 /*container css for main part / past heading clearfixish*/
@@ -190,7 +213,7 @@ body {
   top: 60%;
   height: 40%;
   width: 100%;
-  
+
 }
 
 .productBox:hover #slideUp{
@@ -206,7 +229,7 @@ body {
   color: white;
   margin: 5px 0px;
   border-radius: 5px;
-  display: inline-block;  
+  display: inline-block;
 }
 
 .parts-item span{
@@ -278,7 +301,7 @@ body {
   height: 80px;
   width: 120px;
   border: none;
-  font-family: 'Shrikhand', cursive; 
+  font-family: 'Shrikhand', cursive;
 }
 .panel-footer {
   padding: 0 15px;
@@ -316,5 +339,3 @@ th {
 .glyphicon:hover {
   color: rgba(0,0,0,.5);
 }
-
-

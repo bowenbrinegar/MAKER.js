@@ -3,7 +3,7 @@ var userID;
 
 
 module.exports = function(app) {
-	
+
 
 	app.get("/market/send", function(req, res) {
 		db.Products.findAll().then(data => {
@@ -12,7 +12,7 @@ module.exports = function(app) {
 	});
 
 	app.get("/creators", function(req, res) {
-		db.Users.findAll().then(data => {
+		db.User.findAll().then(data => {
 			res.send(data)
 		});
 	});
@@ -24,7 +24,7 @@ module.exports = function(app) {
 
 	app.post("/submit-creator", function(req, res) {
 		console.log(req.body)
-		db.Users.create({
+		db.User.create({
 			name: req.body.name
 		})
 	})
@@ -44,14 +44,14 @@ module.exports = function(app) {
 
 	app.put("/inventory/update", function(req, res) {
 		console.log(req.body)
-		db.Products.update({ 
+		db.Products.update({
 			product: req.body.product,
 			parts: {parts: req.body.parts},
 			price: req.body.price,
 			cost: req.body.cost },
       { where: {id: req.body.id} }
     ).then(res);
-		
+
 	});
 
 	app.delete("/inventory/delete/row", function(req, res) {

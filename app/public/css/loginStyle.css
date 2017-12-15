@@ -1,0 +1,55 @@
+
+body {
+  padding: 20px 80px;
+  background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
+}
+
+.header {
+  background: rgba(0,0,0,.75);
+  height: 8rem;
+  /*display: flex;
+  justify-content: flex-end;*/
+}
+
+.logo a{
+  color: rgb(84, 237, 211);
+  font-size: 7rem;
+  text-decoration: none;
+}
+
+.nav__item {
+  color: rgb(84, 237, 211);
+  font-size: 3rem;
+  margin: 1rem auto;
+  padding: auto;
+}
+
+.nav__link {
+  color: rgb(84, 237, 211);
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.nav__link:link, .nav__link:visited {
+  color: rgb(84, 237, 211);
+  font-size: 3rem;
+}
+
+.nav__link:hover, .nav__link:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+.panel {
+  max-width: 60vw;
+  margin: 0 auto;
+}
+
+.panel-heading {
+  border-bottom: 1px solid #efefef;
+  border-bottom-width: 1px;
+}
+
+.btn.btn-warning {
+  color: #0F2B27;
+}
