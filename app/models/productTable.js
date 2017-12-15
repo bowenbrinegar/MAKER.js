@@ -45,6 +45,9 @@ module.exports = function (sequelize, DataTypes) {
         allowNull: true
       }
     });
+    models.Products.hasMany(models.Comments, {
+      onDelete: "CASCADE"
+    });
   };
 
 	return Products;
