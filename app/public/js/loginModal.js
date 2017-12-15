@@ -3,10 +3,10 @@ var turn = true
 var loginHtml = `
 				<form id='loginHtml' action="/login" method="POST">
           <div class="form-group">
-            <input type="email" class="form-control" id="loginEmail" placeholder='email' required>
+            <input type="email" class="form-control" name="email" placeholder='email' required>
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" id="loginPassword" placeholder='password' required>
+            <input type="password" class="form-control" name="password" placeholder='password' required>
           </div>
           <button type="submit" class="btn btn-lg btn-block btn-warning">Log In -></button>
         </form>`
