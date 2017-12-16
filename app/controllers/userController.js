@@ -1,7 +1,7 @@
 
 const db = require('../models');
 const path = require('path');
-const User = db.User;
+const User = db.Users;
 const promisify = require('es6-promisify');
 // const passport = require('passport');
 const bCrypt = require('bcrypt-nodejs');
