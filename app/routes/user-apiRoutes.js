@@ -4,10 +4,10 @@ const authController = require('../controllers/authController');
 
 module.exports = (app, passport) => {
  
-  app.get('/login', userController.loginForm);
+  // app.get('/login', userController.loginForm);
   app.post('/login',
     passport.authenticate('login', {
-      failureRedirect: '/login',
+      failureRedirect: '/',
       successRedirect: '/protected'
     })
   );
