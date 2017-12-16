@@ -79,7 +79,7 @@ body {
   text-align: center;
   text-decoration: none;
   position: relative;
-  z-index: 1;
+  z-index: 100;
   text-shadow: 
     1px 1px 0px #FFF, 
     2px 2px 0px #999,
@@ -232,7 +232,15 @@ body {
   width: 800px;
   /* background: rgb(255, 255, 255); */
   background: rgb(50, 50, 50);
-  background-image: url("assets/toyCast.jpg");
+  /* background-image: url("assets/toyCast.jpg"); */
+  z-index: 1000;
+}
+
+#cardBackground {
+  right: 5%;
+  top: 5%;
+  height: 40%;
+  width:40%;
 }
 
 /* user bio style */
@@ -254,84 +262,53 @@ body {
   box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
 }
 
-.userBio {
-  position: absolute;
-  top: 20%;
-  left: 0;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 600px;
-  height: 320px;
-  background: rgba(250, 250, 250, 0.95);
-  font-family: Bangla Sangam MN;
-  color: rgb(0, 0, 0);
-  -webkit-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  -moz-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  /* background-color: blue; */
-}
+
 /* ------------------------------------------------------------------ */
 
 /* flip card */
 /* ------------------------------------------------------------------ */
 
-flip-container {
-  perspective: 1000px;
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
 }
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
 
-/* flip the pane when hovered */
-
-
-.flip-container:hover .flipper,
-.flip-container.hover .flipper {
-  transform: rotateY(180deg);
-}
-
-.flip-container,
-.front,
-.back {
-  width: 100%;
-  height: 100%;
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
 }
 
 /* flip speed goes here */
-
 .flipper {
-  top: 20%;
-  transition: 0.6s;
+	transition: 0.6s;
 	transform-style: preserve-3d;
 
 	position: relative;
 }
 
-
 /* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
 
-.front,
-.back {
-  backface-visibility: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
-
 
 /* front pane, placed above back */
-
 .front {
-  /* background-color: blue; */
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
 }
 
-
 /* back, initially hidden pane */
-
 .back {
-  /* background-color: red; */
-  transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 /* --------------------------------------------------------------------------- */
@@ -341,7 +318,7 @@ flip-container {
   left: 2%;
   top: 2%;
   bottom: 2%;
-  z-index:10;
+  z-index:100;
   width: 65%;
   /* background: rgb(100, 100, 100); */
 }
@@ -362,7 +339,7 @@ flip-container {
   -webkit-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
   -moz-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
   box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  z-index: 100;
+  z-index: 110;
 } */
 
 /* .chatBoxHeader {
@@ -431,6 +408,23 @@ flip-container {
   box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
 }
 
+.userBio {
+  position: relative;
+  top: 20%;
+  right: 0;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  height: 320px;
+  background: rgba(250, 250, 250, 0.95);
+  font-family: Bangla Sangam MN;
+  color: rgb(0, 0, 0);
+  -webkit-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
+  -moz-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
+  box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
+}
+
 /* this is a starting point for rounded profile pics */
 /* ---------------------------------------------------- */
 /* .userPic {
@@ -449,6 +443,7 @@ flip-container {
 
 .modalButtonBox {
   position: absolute;
+  width: 100%;
   bottom: 5%;
   left: 50%;
   -webkit-transform: translate(-50%, 0%);

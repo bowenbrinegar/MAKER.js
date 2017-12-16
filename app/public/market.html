@@ -1,71 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Market</title>
 	<link href="https://fonts.googleapis.com/css?family=Righteous|Fugaz+One|Shrikhand" rel="stylesheet">
 	<link href='css/style.css' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	    crossorigin="anonymous">
+
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	
+
 
 </head>
+
 <body>
 	<div id=header>
 		<a href='/' id='logo'>Maker.js</a>
-		
+
 	</div>
 
-		<div id='moveDown' class="container">
-			<div class='row'>
-		    <div class="col-lg-12">
-		      <ul id='menu'>
-							<li><a href='/'><span>Home</span></a></li>
-							<li><a href='/form'><span>Maker Space</span></a></li>
-							<li><a href='/inventory'><span>Inventory</span></a></li>
-					</ul>
-		    </div>
+	<div id='moveDown' class="container">
+		<div class='row'>
+			<div class="col-lg-12">
+				<ul id='menu'>
+					<li>
+						<a href='/'>
+							<span>Home</span>
+						</a>
+					</li>
+					<li>
+						<a href='/form'>
+							<span>Maker Space</span>
+						</a>
+					</li>
+					<li>
+						<a href='/inventory'>
+							<span>Inventory</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 
 			<br>
 			<br>
 
-		    <div class="col-lg-9">
-		    	<div id='buildContainer'>
-		    		<!-- <div id='searchBox'>
+			<div class="col-lg-9">
+				<div id='buildContainer'>
+					<!-- <div id='searchBox'>
 		    			<div id='searchWrapper'>
 				    		<input id='inputer' type='textbox'>
 				    	</div>
 			    	</div> -->
-						<div id="grid">
-							
-		
-						</div>
+					<div id="grid">
+
 
 					</div>
-		    </div>
+
+				</div>
+			</div>
 		</div>
 	</div>
 
-<div id='background'>
-	<div id='modal' class="flip-container" ontouchstart="this.classList.toggle('hover');">
-		<div id='contentContainer'></div>
-		<!-- <div id='contentContainer' class="flipper"></div> -->
-		<!-- <div id='chatBoxContainer'></div> -->
-		<div class='closeModal'>
-			<span class='glyphicon glyphicon-remove'></span>
+	<div id='background'>
+		<div id='modal'>
+			<div id='contentContainer'></div>
+			<div class='closeModal'>
+				<span class='glyphicon glyphicon-remove'></span>
+			</div>
 		</div>
 	</div>
-</div>
-
-
-
-
-
-
- 
-
 
 
 
@@ -78,21 +83,32 @@
 	<script type='text/javascript' src='js/productModel.js'></script>
 
 	<script id="entry-template" type="text/x-handlebars-template">
-    <h1 class='productHeader'>{{product}}</h1>
-	<div class='flipper'>
-		<p class='productDes' , "front">{{description}}</p>
-	</div>
-	<!-- <p class='userBio' , "back">{{description}}</p> -->
-	<image src= {{{imageURL}}}></image>
+		<h1 class='productHeader'>{{product}}</h1>
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+			<div class='flipper'>
+				<div class="front">
+				<p class='productDes'>{{description}}</p>
+			</div>
+				<div class="back"></div>
+				<p class='userBio' , "back">this is the user bio</p>
+			</div>
+		</div>
+
+		<!-- <div class="back"></div>
+		<p class='userBio' , "back">this is the user bio</p>
+	</div> -->
+		<!-- <p class='userBio' , "back">{{description}}</p> -->
+		<!-- <image id= 'cardBackground' src= {{{imgUrl}}}></image> -->
 
 
-    <div class='modalButtonBox'>
-		<button>Bio/Project</button>
-    	<button>Collab!</button>
-    	<button>Like!</button>
-    	<button>Purchase</button>
-    </div>
+		<div class='modalButtonBox'>
+			<button>Bio/Project</button>
+			<button>Collab!</button>
+			<button>Like!</button>
+			<button>Purchase</button>
+		</div>
 
 	</script>
 </body>
+
 </html>
