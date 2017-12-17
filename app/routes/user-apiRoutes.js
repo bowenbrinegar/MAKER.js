@@ -3,12 +3,16 @@ const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
 
 module.exports = (app, passport) => {
+
+  app.get('/login-needed', function(req,res){
+    res.send(req.user);
+  })
  
   // app.get('/login', userController.loginForm);
   app.post('/login',
     passport.authenticate('login', {
       failureRedirect: '/',
-      successRedirect: '/protected'
+      successRedirect: '/'
     })
   );
 
@@ -21,14 +25,13 @@ module.exports = (app, passport) => {
     userController.validateRegister,
     passport.authenticate('local-signup', {
       failureRedirect: '/register',
-      successRedirect: '/protected'
+      successRedirect: '/'
     })
   );
 
   app.get('/logout', authController.logout);
 
-  app.get('/protected',
-    authController.isLoggedIn,
-    userController.protected);
+
+
 
 };

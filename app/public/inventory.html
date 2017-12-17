@@ -11,14 +11,19 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
 
     <script src="https://unpkg.com/surveyjs-widgets"></script>
-		<link rel='stylesheet' type='text/css' href='css/style.css'>
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
+    
+    <!-- Flash Messages -->
+    <link rel="stylesheet" type="text/css" href="css/flash.css" />
 
  
 </head>
 <body>
 		<div id=header>
 			<a href='/' id='logo'>Maker.js</a>
-		</div>
+    </div>
+    
+    <div class="inner"></div>
 
 		<div id='moveDown' class="container">
 			<div class='row'>
@@ -26,7 +31,7 @@
 		      <ul id='menu'>
 		      				<li><a href='/'><span>Home</span></a></li>
 							<li><a href='/market'><span>Market</span></a></li>
-							<li><a href='/form'><span>Maker Space</span></a></li>
+							<li id="makerSpaceLink"><a href='/form'><span>Maker Space</span></a></li>
 					</ul>
 		    </div>
 
@@ -56,7 +61,10 @@
 
 		
 
-		<script type='text/javascript' src='js/inventoryRender.js'></script>
+    <script type='text/javascript' src='js/inventoryRender.js'></script>
+    
+    <!-- Flash Messages -->
+    <script type="text/javascript" src="js/messages.js"></script>
 
 </body>
 </html>

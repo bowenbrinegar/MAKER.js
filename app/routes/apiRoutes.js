@@ -1,7 +1,9 @@
 var db = require("./../models");
 
 module.exports = function(app) {
-	
+
+  
+
 	app.get('/modal/send/:id', function(req, res) {
 		db.Products.findOne({ 
 			where: {id: req.params.id} 

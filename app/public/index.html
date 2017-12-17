@@ -4,16 +4,23 @@
 	<meta charset="UTF-8">
 	<title>Maker.js</title>
 	<!-- bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	
 	<!-- flickity -->
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  
 	<!-- link to css -->
-	<link rel='stylesheet' type='text/css' href='css/indexStyle.css'>
+  <link rel='stylesheet' type='text/css' href='css/indexStyle.css'>
+  
+  <!-- link to flash css -->
+  <link rel="stylesheet" type="text/css" href="css/flash.css">
 
 </head>
 <body>
@@ -25,7 +32,11 @@
 		<!-- dropdown menu-->
 	</div>
 
-	<br>
+  <br>
+
+  <!-- Flash messages -->
+  <div class="inner"></div>
+  
 	
 	<!-- flickity carousel -->
 	
@@ -53,8 +64,8 @@
 		<div class="col-lg-12">
 			<ul id='menu'>
 				<li><a href='/market'><span>Market</span></a></li>
-				<li><a href='/form'><span>Maker Space</span></a></li>
-				<li><a href='/inventory'><span>Inventory</span></a></li>
+        <li id="makerSpaceLink"><a href='/form'><span>Maker Space</span></a></li>
+				<li id="inventoryLink"><a href='/inventory'><span>Inventory</span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -107,7 +118,9 @@
 
 	<script type='text/javascript' src='js/indexAjax.js'></script>
 
-	<script type='text/javascript' src='js/loginModal.js'></script>
+  <script type='text/javascript' src='js/loginModal.js'></script>
+  
+  <script type="text/javascript" src="js/messages.js"></script>
 	
 </body>
 </html>

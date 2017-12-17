@@ -8,23 +8,27 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+  <!-- Flash Messages -->
+  <link rel="stylesheet" type="text/css" href="css/flash.css" />
 	
 
 </head>
 <body>
 	<div id=header>
 		<a href='/' id='logo'>Maker.js</a>
-		
-	</div>
+  </div>
+  
+  <div class="inner"></div>
 
 		<div id='moveDown' class="container">
 			<div class='row'>
 		    <div class="col-lg-12">
 		      <ul id='menu'>
 							<li><a href='/'><span>Home</span></a></li>
-							<li><a href='/form'><span>Maker Space</span></a></li>
-							<li><a href='/inventory'><span>Inventory</span></a></li>
+							<li id="makerSpaceLink"><a href='/form'><span>Maker Space</span></a></li>
+							<li id="inventoryLink"><a href='/inventory'><span>Inventory</span></a></li>
 					</ul>
 		    </div>
 
@@ -75,7 +79,10 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js'></script>
 
 	<script type='text/javascript' src='js/productRender.js'></script>
-	<script type='text/javascript' src='js/productModel.js'></script>
+  <script type='text/javascript' src='js/productModel.js'></script>
+  
+  <!-- Flash messages -->
+  <script type="text/javascript" src="js/messages.js"></script>
 
 	<script id="entry-template" type="text/x-handlebars-template">
     <h1 class='productHeader'>{{product}}</h1>
