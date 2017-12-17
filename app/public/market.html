@@ -85,13 +85,20 @@
 	<script id="entry-template" type="text/x-handlebars-template">
 		<h1 class='productHeader'>{{product}}</h1>
 		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+<input type="checkbox" id="flipCtl"/>
+<label id="flipBtn" for="flipCtl">
 			<div class='flipper'>
+
 				<div class="front">
-				<p class='productDes'>{{description}}</p>
+					<p class='productDes'>{{description}}</p>
+				</div>
+
+				<div class="back">
+					<p class='userBio' , "back">this is the user bio</p>
+				</div>
+
 			</div>
-				<div class="back"></div>
-				<p class='userBio' , "back">this is the user bio</p>
-			</div>
+</label>
 		</div>
 
 		<!-- <div class="back"></div>
