@@ -1,5 +1,5 @@
 
-
+console.log('messages');
 
 //  newFlash function creates a new flash message, it takes in two parameters:
 //  flashType: 'success' or 'error'
@@ -38,6 +38,7 @@ const checkLogInStatus = (newLink) => {
     url:'/login-needed',
     type: "GET"
   }).done(function(res) {
+    console.log(res);
     if (!res) {
       newFlash('error', 'You must be logged in to view that page');
       setTimeout(destroyFlash, 2500);
@@ -49,12 +50,15 @@ const checkLogInStatus = (newLink) => {
 };
 
 
+
+
 // Check to see if user is logged in when clicking on the protected pages' links
 // If not logged in, the links are disabled and a flash message is shown
 $(document).ready(() => {
   $('#inventoryLink a').on('click', function () {
     $(this).removeAttr('href');
     checkLogInStatus('/inventory');
+    console.log('link clicked');
   });
 
   $('#makerSpaceLink a').on('click', function() {

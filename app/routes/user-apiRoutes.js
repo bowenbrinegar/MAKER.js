@@ -4,7 +4,7 @@ const authController = require('../controllers/authController');
 
 module.exports = (app, passport) => {
 
-  app.get('/login-needed', function(req,res){
+  app.get('/login-needed', function(req, res) {
     res.send(req.user);
   })
  
@@ -30,6 +30,10 @@ module.exports = (app, passport) => {
   );
 
   app.get('/logout', authController.logout);
+
+  // app.get('*', function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/index.html"));
+  // });
 
 
 
