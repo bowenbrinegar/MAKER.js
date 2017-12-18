@@ -43,7 +43,13 @@
 	</div>
 
 	<div id='chatModal'>
-		<div id='chatBoxContainer'></div>
+		<div id='chatBoxContainer'>
+			<form id='commentInput'>
+				<input type='text' placeholder='leave a comment..'>
+				<button type='submit'>submit</button>
+			</form>
+			<div id='comments'></div>
+		</div>
 	</div>
 
 
@@ -56,6 +62,7 @@
 	<script type='text/javascript' src='js/productModel.js'></script>
 
 	<script type='text/javascript' src='js/productModalFunctions.js'></script>
+	<script type='text/javascript' src='js/chat.js'></script>
 
 	<script id="entry-template" type="text/x-handlebars-template">
     <h1 class='productHeader'>{{product}}</h1>
