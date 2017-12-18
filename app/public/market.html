@@ -28,9 +28,6 @@
 		</div>
 	</div>
 
-	
-
-
 
 	<div id='productModal'>
 		<div id='contentContainer'></div>
@@ -65,11 +62,23 @@
 	<script type='text/javascript' src='js/chat.js'></script>
 
 	<script id="entry-template" type="text/x-handlebars-template">
-    <h1 class='productHeader'>{{product}}</h1>
-    <p class='productDes'>{{description}}</p>
+		<h1 class='productHeader'>{{product}}</h1>
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+			<input type="checkbox" id="flipCtl"/>
+			<label id="flipBtn" for="flipCtl">
+						<div class='flipper'>
 
-    <span id='identifier' data-id={{{id}}}></span>
+							<div class="front">
+								<p class='productDes'>{{description}}</p>
+							</div>
 
+							<div class="back">
+								<p class='userBio' , "back">this is the user bio</p>
+							</div>
+
+						</div>
+			</label>
+		</div>
 	</script>
 	
 </body>
