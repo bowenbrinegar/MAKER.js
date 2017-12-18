@@ -3,7 +3,7 @@ $(document).ready(function() {
 $('#navContainer').on("click", "div", function() {
 	var v = $(this).attr("value")
 	console.log("value", v)
-	if (v==0) {window.location.assign('/market'); }
+	if (v==0) { window.location.assign('/market'); }
 	else if (v==1) { window.location.assign('/form'); }
 	else if (v==2) { window.location.assign('/inventory'); }
 })
