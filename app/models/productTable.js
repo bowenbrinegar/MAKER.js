@@ -37,6 +37,14 @@ module.exports = function (sequelize, DataTypes) {
         isUrl: true
       }
     },
+    collab: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0
+    },
+    like: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0
+    },
  });
 
 	Products.associate = models => {
@@ -44,6 +52,12 @@ module.exports = function (sequelize, DataTypes) {
       foreignKey: {
         allowNull: true
       }
+    });
+    models.Products.hasMany(models.Comments, {
+      onDelete: "CASCADE"
+    });
+    models.Products.hasMany(models.Purchases, {
+      onDelete: "CASCADE"
     });
   };
 

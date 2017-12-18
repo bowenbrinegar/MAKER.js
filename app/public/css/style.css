@@ -1,3 +1,143 @@
+/*flickity css*/
+
+.main-carousel {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  -webkit-transform: translate(-50%,0%);
+  width: 800px;
+  height: 390px;
+  
+/*  border-style: solid double;
+  border-color: black;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-width: 20px;*/
+}
+
+.carousel-cell {
+  margin: 0px 10px;
+  width: 78% !important;
+  height: 350px !important;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.carousel-cell > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  width: 100%;
+  height: auto;
+  max-height: 375px;
+}
+
+/*login button*/
+.userClick {
+  -webkit-transform: translate(-50%,-50%);
+  position: absolute;
+  left: 50%;
+  top: 650px;
+  height: 200px;
+  width: 800px;
+  font-size: 80px;
+  text-align: center;
+  line-height: 190px;
+  font-family: 'Righteous', cursive;
+  border-radius: 225px;
+  /*background: rgb(84, 237, 211);*/
+  background: rgb(247, 114, 114);
+  border-outline: none;
+}
+
+.userClick:hover {
+  background: rgb(84, 237, 211);
+  color: white;
+  border: 20px solid black;
+  line-height: 150px;
+  -webkit-box-shadow: inset 0px 0px 226px 5px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 226px 5px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 226px 5px rgba(0,0,0,0.75);
+}
+
+/*login modal*/
+
+#loginModal {
+  display: none;
+  position: absolute;
+  margin: auto;
+  height: 500px;
+  width: 600px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  background: white;
+  -webkit-box-shadow: -1px 13px 98px 6px rgba(0,0,0,0.75);
+}
+
+#buttonContainer {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 98px;
+  background: rgba(255,255,255,.5);
+}
+
+#buttonContainer > div {
+  float: left;
+  width: 50%;
+  height: 98px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 90px;
+}
+
+#buttonContainer > div:hover {
+  box-shadow: inset 0 -10px 20px -10px rgba(0,0,0,0.75);
+}
+
+
+#formContainer {
+  position: absolute;
+  top: 98px;
+  width: 100%;
+}
+
+.form-group > input {
+  margin: 30px;
+  width: 90%;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+#registerHtml > input {
+  border-radius: 0px;
+}
+
+#loginHtml > button {
+  border-radius: 0px;
+}
+
+
+
+/*footer css*/
+
+footer {
+  color: white;
+  text-align: center;
+  height: 80px;
+  right: 0;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,.75);
+}
+
+
+
 /*body and background*/
 
 body {
@@ -5,11 +145,133 @@ body {
   background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
 }
 
+/*home page*/
+
+#homeContainer {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-shadow: inset 0px 0px 226px 5px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 226px 5px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 226px 5px rgba(0,0,0,0.75);
+  overflow: hidden;
+}
+
+#profileContainer {
+  position: absolute;
+  left: 0;
+  width: 4%;
+  height: 100%;
+  -webkit-box-shadow: inset 0px 0px 226px 5px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 226px 5px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 226px 5px rgba(0,0,0,0.75); 
+}
+
+#selectProfile {
+  position: absolute;
+  -webkit-transform: translate(0%,0%);
+  bottom: 10%;
+  right: 0;
+  height: 30px;
+  width: 35px;
+  text-align: right;
+  background: black;
+  color: white;
+  padding-right: 2px;
+}
+
+#selectProfile > span:hover {
+  color: red;
+}
+
+
+
+#navContainer {
+  position: absolute;
+  -webkit-transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+  height: 420px;
+  width: 500px;
+}
+
+
+.homeDirectoryButtons {
+  margin: 15px 0px;
+  height: 120px;
+  width: 500px;
+  background: rgb(247, 114, 114);
+  text-align: center;
+  line-height: 120px;
+  font-family: 'Righteous', cursive;
+  font-size: 60px;
+  border-radius: 15px;
+}
+
+.homeDirectoryButtons:hover {
+  color: white;
+  background: rgb(84, 237, 211);
+  -webkit-box-shadow: inset 0px 0px 226px 5px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 226px 5px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 226px 5px rgba(0,0,0,0.75);
+}
+
+#infoContainer {
+  position: absolute;
+  -webkit-transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+  height: 420px;
+  width: 400px;
+  background: rgba(255,255,255,.3);
+  -webkit-box-shadow: -1px 13px 98px 6px rgba(0,0,0,0.75);
+}
+
+
+#carouselNav {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  background: rgba(255,255,255,.5);
+}
+
+.directional {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: black;
+}
+
+.directional > img {
+  position: absolute;
+  -webkit-transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+#up {
+  top: 5%;
+}
+
+#down {
+  bottom: 5%;
+}
+
 /*buildContainer*/
 
 #buildContainer {
   position: absolute;
-  width: 100%;
+  -webkit-transform: translate(-50%,0%);
+  top: 30px;
+  left: 50%;
+  width: 80%;
   margin-bottom: 100px;
 }
 
@@ -41,339 +303,156 @@ body {
   line-height: 1;
   position: absolute;
   top: 8%;
+  left: 2%;
+  -webkit-transform: translate(0%, 0%);
+}
+
+#headerNav {
+  position: absolute;
+  right: 2%;
+  width: 300px;
+  height: 80px;
+}
+
+#headerNav > a {
+  float: left;
+  margin: 0px 10px;
+}
+
+#home > img {
+  
+  height: 80px;
+  width: 80px;
+}
+
+#back > img {
+  margin-top: 12px;
+  height: 60px;
+  width: 60px;
+}
+
+#key > img {
+  margin-top: 12px;
+  height: 60px;
+  width: 60px;
+}
+
+/*grid*/
+
+#gridContainer {
+  position: absolute;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  -webkit-transform: translate(-50%,-50%);
+  top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, 0%);
+  width: 700px;
+  height: 730px;
+  overflow: scroll;
 }
 
-/*navagation css*/
-
-
-#menu {
-  width: 1090px;
-  height: 42px;
-  list-style: none;
-  position: absolute;
-  text-align: center;
-
-}
-#menu li {
-  display: inline-block;
-  /*float: left;*/
-  width: 200px;
-  margin: 10px 10px;
-  position: relative;
-  /*-webkit-transform: skewy(-3deg);*/
-  -webkit-backface-visibility: hidden;
-  -webkit-transition: 200ms all;
+#gridContainer::-webkit-scrollbar { 
+    display: none; 
 }
 
-#menu li a {
-  text-transform: uppercase;
-  font-family: 'Righteous', cursive;
-  font-weight: 800;
-  display: block;
-  background: #FFF;
-  padding: 2px 20px;
-  color: #333;
-  font-size: 20px;
-  text-align: center;
-  text-decoration: none;
-  position: relative;
-  z-index: 1;
-  text-shadow: 
-    1px 1px 0px #FFF, 
-    2px 2px 0px #999,
-    3px 3px 0px #FFF;
-  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.05) 100%);
-  -webkit-transition: 1s all;
-  background-image: -webkit-linear-gradient(left top, 
-    transparent 0%, transparent 25%, 
-    rgba(0,0,0,.15) 25%, rgba(0,0,0,.15) 50%, 
-    transparent 50%, transparent 75%, 
-    rgba(0,0,0,.15) 75%);
-  background-size: 4px 4px;
-  box-shadow: 
-    0 0 0 1px rgba(0,0,0,.4) inset, 
-    0 0 20px -5px rgba(0,0,0,.4),
-    0 0 0px 3px #FFF inset;
-}
-#menu li:hover {
-  margin-left: 25px;
-}
-#menu a:hover {
-  color: #d90075;
-}
-#menu li:after,
-#menu li:before {
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 100%;
-  background: #BBB;
-  border-radius: 4px;
-}
-#menu li:after {
-  background-image: -webkit-linear-gradient(left, transparent 0%, rgba(0,0,0,.4) 100%);
-  right: 0;
-  top: -4px; 
-}
-#menu li:before {
-  left: 0;
-  bottom: -4px;
-  background-image: -webkit-linear-gradient(right, transparent 0%, rgba(0,0,0,.4) 100%);
-}
-
-
-/*container css for main part / past heading clearfixish*/
-
-#moveDown {
-  margin-top: 100px;
-}
-
-/*searchBox(market.html) / creatorBox(index.html)*/
-
-#searchBox {
-  position: relative;
-  margin: 20px;
-  height: 30px;
-}
-
-#searchWrapper {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0%);
-}
-
-#inputer {
-  width: 400px;
-}
-
-/*creatorBox(index.html)*/
-
-#creatorBox{
-  position: relative;
-  margin: 0px 0px 20px 0px;
-  height: 100px;
-}
-
-#creatorSelect {
-  clear: both;
-  float: right;
-}
-
-#creator {
-   width: 240px;
+#grid {
+  width: 800px;
 }
 
 /*product Box*/
-.grid-sizer,
 .grid-item {
-  width: 44%;
+  float: left;
+  width: 40%;
+  margin: 0px 10px 25px 10px;
 }
-
-.gutter-sizer {
-  width: 4%;
-}
-
 
 .productBox {
+  position: relative;
   height: 300px;
   width: 100%;
-  margin: 10px 20px;
-  background: rgba(99, 99, 99, 0.5);
-  /* background-image: ; */
-  font-family: Alfa Slab One;
-  text-decoration: underline;
-  color: rgb(84, 237, 211);
+  background: rgba(0,0,0,.5);
+  overflow: hidden;
 }
 
+.pImg {
+  position: absolute; 
+  -webkit-transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: auto;
+  max-height: 300px;
+}
 
-#slideUp {
+#slide {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
   display: none;
-  background: rgba(90,90,90, 0.5);
-  position: relative;
+  background: rgba(255,255,255,.75);
   -webkit-transition: bottom 0.6s ease-in-out;
-  /* top: 60%; */
   height: 40%;
   width: 100%;
+  text-align: center;
+  color: black;
+  font-family: 'Righteous', cursive;
+  -webkit-box-shadow: 0px -5px 48px -12px rgba(0,0,0,0.95);
+  -moz-box-shadow: 0px -5px 48px -12px rgba(0,0,0,0.95);
+  box-shadow: 0px -5px 48px -12px rgba(0,0,0,0.95);
 }
 
-#slideUp > h1 {
-  padding-top: 20px;
-  padding-left: 20px;
+#slide > h1 {
+  line-height: 69px;
 }
 
-.productBox:hover #slideUp{
+
+
+.productBox:hover #slide{
   display: block;
   transition: 5s;
 }
 
-
-
 /*product modal*/
 
-#background {
+#productModal {
   display: none;
   position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgba(0,0,0,.3);
+  left: 800px;
+  top: 120px;
+  -webkit-transform: translate(-50%, 0%);
+  height: 350px;
+  width: 500px;
+  background: rgba(255,255,255,1);
+  -webkit-box-shadow: 0px 2px 114px -8px rgba(79,79,79,1);
+-moz-box-shadow: 0px 2px 114px -8px rgba(79,79,79,1);
+box-shadow: 0px 2px 114px -8px rgba(79,79,79,1);
 }
-
-#modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  height: 500px;
-  width: 800px;
-  /* background: rgb(255, 255, 255); */
-  background: rgb(50, 50, 50);
-  background-image: url("assets/toyCast.jpg");
-}
-
-/* user bio style */
-/* ------------------------------------------------------------------ */
-
-.userBioHeader {
-  position: absolute;
-  /* right: 5%; */
-  /* top: 5%; */
-  width: 100%;
-  height: 60px;
-  background: rgb(50, 50, 50);
-  /* background-image: */
-  font-family: Alfa Slab One;
-  text-decoration: underline;
-  color: rgb(84, 237, 211);
-  -webkit-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  -moz-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-}
-
-.userBio {
-  position: absolute;
-  top: 20%;
-  left: 0;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 600px;
-  height: 320px;
-  background: rgba(250, 250, 250, 0.95);
-  font-family: Bangla Sangam MN;
-  color: rgb(0, 0, 0);
-  -webkit-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  -moz-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  /* background-color: blue; */
-}
-/* ------------------------------------------------------------------ */
-
-/* flip card */
-/* ------------------------------------------------------------------ */
-
-flip-container {
-  perspective: 1000px;
-}
-
-/* flip the pane when hovered */
-
-
-.flip-container:hover .flipper,
-.flip-container.hover .flipper {
-  transform: rotateY(180deg);
-}
-
-.flip-container,
-.front,
-.back {
-  width: 100%;
-  height: 100%;
-}
-
-/* flip speed goes here */
-
-.flipper {
-  top: 20%;
-  transition: 0.6s;
-	transform-style: preserve-3d;
-
-	position: relative;
-}
-
-
-/* hide back of pane during swap */
-
-.front,
-.back {
-  backface-visibility: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-
-/* front pane, placed above back */
-
-.front {
-  /* background-color: blue; */
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
-}
-
-
-/* back, initially hidden pane */
-
-.back {
-  /* background-color: red; */
-  transform: rotateY(180deg);
-}
-
-/* --------------------------------------------------------------------------- */
 
 #contentContainer {
   position: absolute;
-  left: 2%;
-  top: 2%;
-  bottom: 2%;
-  z-index:10;
-  width: 65%;
-  /* background: rgb(100, 100, 100); */
-}
-
-#contentContainer > h1 {
-  padding-top: 10px;
-  padding-left: 30px;
-}
-
-/* #chatBoxContainer {
-  position: absolute;
-  right: 2%;
-  top: 2%;
-  bottom: 2%;
-  width: 29%;
-  background: rgba(250, 250, 250, 0.95);
-  color: rgb(0, 0, 0);
-  -webkit-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  -moz-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  z-index: 100;
-} */
-
-/* .chatBoxHeader {
-  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
   width: 100%;
-  height: 60px;
-  background: rgb(50, 50, 50);
-  font-family: Alfa Slab One;
-  text-decoration: underline;
-  color: rgb(84, 237, 211);
-} */
+  height: 100%;
+  background: rgba(0,0,0,.5);
+}
+
+#chatModal {
+  position: absolute;
+  left: 800px;
+  top: 480px;
+  display: none;
+  -webkit-transform: translate(-50%, 0%);
+  height: 250px;
+  width: 500px;
+  background: rgba(255,255,255,1);
+  -webkit-box-shadow: 0px 2px 114px -8px rgba(79,79,79,1);
+  -moz-box-shadow: 0px 2px 114px -8px rgba(79,79,79,1);
+  box-shadow: 0px 2px 114px -8px rgba(79,79,79,1);
+}
+
 
 .closeModal {
   position: absolute;
@@ -400,69 +479,28 @@ flip-container {
 
 .productHeader {
   position: absolute;
-  /* right: 5%; */
-  /* top: 5%; */
-  width: 100%;
-  height: 60px;
-  background: rgb(50, 50, 50);
-  /* background-image: */
-  font-family: Alfa Slab One;
-  text-decoration: underline;
-  color: rgb(84, 237, 211);
-  -webkit-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  -moz-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
+  right: 5%;
+  top: 5%;
+  width: 90%;
+  height: 50px;
+  background: rgba(255,255,255,.5);
 }
 
 .productDes {
-  position: relative;
-  top: 20%;
+  position: absolute;
+  top: 29%;
   right: 0;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
   width: 100%;
-  height: 320px;
-  background: rgba(250, 250, 250, 0.95);
-  font-family: Bangla Sangam MN;
-  color: rgb(0, 0, 0);
-  -webkit-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  -moz-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
-  box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
+  height: 200px;
+  background: rgba(255,255,255,.5);
 }
-
-/* this is a starting point for rounded profile pics */
-/* ---------------------------------------------------- */
-/* .userPic {
-  display: inline-block;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-.one {
-  background-image: url('http://placehold.it/400x200');
-} */
 
 .modalButtonBox {
   position: absolute;
   bottom: 5%;
   left: 50%;
   -webkit-transform: translate(-50%, 0%);
-
 }
-
-.modalButtonBox > button {
-  background: rgb(84, 237, 211);
-  color: black;
-  font-family: 'Shrikhand', cursive ;
-  border: none;
-}
-
-
 
 
 /*toolbox parts masonry render grid item (addProduct.js)*/
@@ -554,12 +592,51 @@ flip-container {
   background: none;
 }
 
+
+/*table css*/
+#inventoryContainer {
+  position: absolute;
+  -webkit-transform: translate(-50%,0%);
+  left: 50%;
+  width: 880px;
+}
+
+#inventoryContainer > h1 {
+  font-family: 'Righteous', cursive;
+  background: rgb(247, 114, 114) ;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+
+
 /*table styles (inventory.html)*/
 
+
+#projects, #purchase {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#projects th, #purchase th {
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-bottom:5px;
+  text-align: left;
+}
+
+
+#projects tr:nth-child(even), #purchase tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#projects tr:hover, #purchase tr:hover {
+  background-color: #ddd;
+}
+
 th, td {
-    font-family: 'Ubuntu', sans-serif;
-    border-bottom: 2px solid;
-    border-color: rgba(0,0,0,.3);
+  font-family: 'Ubuntu', sans-serif;
+  border-bottom: 2px solid;
+  border-color: rgba(0,0,0,.3);
 }
 
 th {
@@ -589,13 +666,4 @@ th {
   width: 100%;
   height: 400px;
   margin-top: 40px;
-}
-
-@media screen and ( min-width: 768px ) {
-   /*half-width cells for larger devices*/ 
-  .carousel-cell { width: 50%; }
-}
-
-.pull-right {
-  float: right !important;
 }

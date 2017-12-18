@@ -1,33 +1,39 @@
-const sequelizeTransforms = require('sequelize-transforms');
-
-
 module.exports = function(sequelize, DataTypes) {
-  const Users = sequelize.define('Users', {
-   email: {
-      type: DataTypes.STRING,
-      notEmpty: true,
-      trim: true,
-      lowercase: true,
-      validate: {
-        isEmail: true
-      },
-    },
+  var Users = sequelize.define("Users", {
     name: {
-      type: DataTypes.STRING,
-      notEmpty: true
+        type: DataTypes.STRING,
+        notEmpty: true
+    },
+    email: {
+        type: DataTypes.STRING,
+        validate: {
+            isEmail: true
+        }
     },
     password: {
-      type: DataTypes.STRING,
-      // allowNull: false
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+
+    last_login: {
+        type: DataTypes.DATE
+    },
+    status: {
+        type: DataTypes.ENUM('active', 'inactive'),
+        defaultValue: 'active'
     }
   });
 
-  sequelizeTransforms(Users);
+  Users.associate = models => {
+  	models.Users.hasMany(models.Products, {
+  		onDelete: "CASCADE"
+  	});
+  };
 
   Users.associate = models => {
-      models.Users.hasMany(models.Products, {
-          onDelete: "CASCADE"
-      });
+    models.Users.hasMany(models.Purchases, {
+      onDelete: "CASCADE"
+    });
   };
 
   return Users;
