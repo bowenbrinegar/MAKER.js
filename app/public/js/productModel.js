@@ -19,6 +19,7 @@ function renderModal(data) {
 	var context = data
 	var html    = template(context);
 	$('#contentContainer').append(html)
+	fetchComments(); 
 	if (turn) {
 		animatePage();
 		turn = !turn;

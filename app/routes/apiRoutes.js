@@ -2,23 +2,6 @@ var db = require("./../models");
 
 module.exports = function(app, passport) {
 
-	// app.post('/signup', passport.authenticate('local-signup', {
-	// 	successRedirect: '/',
-	// 	failureRedirect: '/loginError'
-	// }))
-
-	// app.post('/login', passport.authenticate('local-signin', {
- //        successRedirect: '/',
- //        failureRedirect: '/loginError'
-	//     }
-	// ));
-
-	// app.get('/logout', function(req, res) {
-	// 	req.session.destroy(function(err) {
- //        res.redirect('/');
- //    });
-	// })
-
 	app.get('/modal/send/:id', function(req, res) {
 		db.Products.findOne({ 
 			where: {id: req.params.id} 
@@ -87,6 +70,39 @@ module.exports = function(app, passport) {
 		db.Purchases.create({
 			ProductId: req.body.id,
 			UserId: req.user.id
+		})
+	})
+
+	app.post('/comment-post', function(req, res) {
+		console.log("post working")
+		db.Comments.create({
+			comment: req.body.comment,
+			ProductId: req.body.ProductId,
+			UserId: req.user.id
+		}).done(data => {
+			res.send("success")
+		})
+	})
+
+	app.get('/comment-get/:pid', function(req, res) {
+		db.Comments.findAll({
+			where: { ProductId: req.params.pid},
+			include: db.Users
+		}).done(data => {
+			console.log(data)
+			res.send(data)
+		})
+	})
+
+	app.put('/comment-like', function(req, res) {
+		var likeCount = 0;
+		db.Comments.findOne({ where: {id: req.body.commentId}
+		}).done(data => {
+			likeCount = data.like;
+		})
+		db.Comments.update({like: likeCount + 1},
+		{where: {id: req.body.commentId}}).done(data => {
+			res.send("success")
 		})
 	})
 

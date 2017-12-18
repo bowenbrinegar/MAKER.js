@@ -502,6 +502,72 @@ box-shadow: 0px 2px 114px -8px rgba(79,79,79,1);
   -webkit-transform: translate(-50%, 0%);
 }
 
+/*comment box*/
+
+#commentInput {
+  width: 100%;
+  background: black;
+  height: 50px;
+}
+
+#commentInput > input {
+  width: 400px;
+  margin: 10px 5px 0px 15px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#commentInput > button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  background: red;
+}
+
+#comments {
+  overflow: scroll;
+  height: 200px;
+}
+
+
+#comments > div {
+  background: rgba(0,0,0,.3);
+  margin: 10px 0px;
+  position: relative;
+  display: inline-block;
+}
+
+.username, .commentLoad {
+  font-family: "Righteous", cursive;
+  height: 100%;
+}
+
+.username {
+  margin: 10px 0px -15px 0px;
+  background: white;
+  padding: 0px 10px;
+}
+
+.commentLoad {
+  display: inline-block;
+  font-size: 20px;
+  width: 80%;
+  min-width: 401px;
+  text-align: justify;
+  margin: 20px 0px 5px 10px;
+}
+
+#commentLike {
+  border-radius: 3px;
+  background: red;
+  color: white;
+  float: right;
+  margin: 23px;
+  padding: 10px;
+}
+
 
 /*toolbox parts masonry render grid item (addProduct.js)*/
 

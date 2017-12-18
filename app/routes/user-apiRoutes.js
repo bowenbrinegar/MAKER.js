@@ -8,7 +8,7 @@ module.exports = (app, passport) => {
   app.post('/login',
     passport.authenticate('login', {
       failureRedirect: '/',
-      successRedirect: '/protected'
+      successRedirect: '/'
     })
   );
 
