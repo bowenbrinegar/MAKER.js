@@ -1,4 +1,5 @@
 var path = require("path");
+var authController = require('../controllers/authController');
 
 module.exports = function(app) {
   app.get("/", function(req, res) {
