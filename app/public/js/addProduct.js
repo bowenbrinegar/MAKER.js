@@ -70,63 +70,63 @@ Survey.defaultBootstrapCss.navigationButton = "completeButton";
 var json = {
     pages: [
         { questions: [ 
-            { type:"text", 
-              name:"object",
-              title: "What do you want to make?",
-              placeHolder:"Be creative",
-              isRequired: true,
-              validators: [
-              			{
-              				type:"text",
-              				minLength: 1,
-              				maxLength: 20
-              			}
-              		]
+        	{ type:"text", 
+            name:"object",
+            title: "What do you want to make?",
+            placeHolder:"Be creative",
+            isRequired: true,
+            validators: [
+		            			{
+		            				type:"text",
+		            				minLength: 1,
+		            				maxLength: 20
+		            			}
+		            	]
           },
-            { type: "comment",
-              name: "description",
-              title: "Add a description",
-              placeHolder: "Be Creative",
-              isRequired: true,
-              validators: [
-              			{
-              				type:"text",
-              				minLength: 1
-              			}
-              		]
+          { type: "comment",
+            name: "description",
+            title: "Add a description",
+            placeHolder: "Be Creative",
+            isRequired: true,
+            validators: [
+		            			{
+		            				type:"text",
+		            				minLength: 1
+		            			}
+		            	]
           },
           { type: "text",
             inputType: "url",
-              name: "imgUrl",
-              title: "Image Url",
-              placeHolder: "Img URL",
-              isRequired: true,
+            name: "imgUrl",
+            title: "Image Url",
+            placeHolder: "Img URL",
+            isRequired: true,
           },
-            { type:"text",
-              name:"price",
-              title: "How much will you sell it for?",
-              placeHolder:"Input a dollor Amount",
-              isRequired: true,
-              validators: [
-                        {
-                            type: "numeric",
-                            minValue: 0,
-                            maxValue: 1000000
-                        }
-                    ]
-                },
-            { type:"text",
-              name:"cost",
-              title: "How much will it cost you to make",
-              placeHolder:"Input a dollor Amount",
-              isRequired: true,
-              validators: [
-                        {
-                            type: "numeric",
-                            minValue: 0,
-                            maxValue: 1000000
-                        }
-                    ]
+          { type:"text",
+            name:"price",
+            title: "How much will you sell it for?",
+            placeHolder:"Input a dollor Amount",
+            isRequired: true,
+            validators: [
+                      {
+                          type: "numeric",
+                          minValue: 0,
+                          maxValue: 1000000
+                      }
+                  ]
+          },
+          { type:"text",
+            name:"cost",
+            title: "How much will it cost you to make",
+            placeHolder:"Input a dollor Amount",
+            isRequired: true,
+            validators: [
+                      {
+                          type: "numeric",
+                          minValue: 0,
+                          maxValue: 1000000
+                      }
+                  ]
           } 
         ]}
     ]
@@ -147,8 +147,20 @@ var json = {
 	    $.ajax("/submit/project", {
 	      type: "POST",
 	      data: obj
-	    }).then(); 
-	    window.location.replace("/market");
+	    }).then(function(res) {
+	    	switch (res) {
+	    		case "0":	
+	    			window.location.assign('/')
+	    			break;
+	    		case "1":
+	    			window.location.assign('/market')
+	    			break;
+	    		case "2":
+	    			window.location.assign('/form')
+	    			break;
+	    	}
+	    }); 
+
 	});
 
 	$('#surveyElement').Survey({ 

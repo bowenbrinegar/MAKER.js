@@ -12,22 +12,22 @@ module.exports = (app, passport) => {
     })
   );
 
-  app.get('/register', userController.registerForm);
+  app.get('/signup', userController.registerForm);
 
   // 1. Validate the registration data
   // 2. Register the user
   // 3. Log in the user after registration
-  app.post('/register', 
+  app.post('/signup', 
     userController.validateRegister,
     passport.authenticate('local-signup', {
-      failureRedirect: '/register',
-      successRedirect: '/protected'
+      failureRedirect: '/error',
+      successRedirect: '/'
     })
   );
 
   app.get('/logout', authController.logout);
 
-  app.get('/protected',
+  app.get('/',
     authController.isLoggedIn,
     userController.protected);
 

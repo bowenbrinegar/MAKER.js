@@ -15,58 +15,36 @@
 <body>
 	<div id=header>
 		<a href='/' id='logo'>Maker.js</a>
-		
-	</div>
-
-		<div id='moveDown' class="container">
-			<div class='row'>
-		    <div class="col-lg-12">
-		      <ul id='menu'>
-							<li><a href='/'><span>Home</span></a></li>
-							<li><a href='/form'><span>Maker Space</span></a></li>
-							<li><a href='/inventory'><span>Inventory</span></a></li>
-					</ul>
-		    </div>
-
-			<br>
-			<br>
-
-		    <div class="col-lg-9">
-		    	<div id='buildContainer'>
-		    		<!-- <div id='searchBox'>
-		    			<div id='searchWrapper'>
-				    		<input id='inputer' type='textbox'>
-				    	</div>
-			    	</div> -->
-						<div id="grid">
-							
-		
-						</div>
-
-					</div>
-		    </div>
+		<div id='headerNav'>
+			<a href='/home' id='key'><img src="./assets/key.png"></a>
+			<a href='/home' id='back'><img src="./assets/back.png"></a>
+			<a href='/home' id='home'><img src="./assets/home.png"></a>
 		</div>
 	</div>
 
-<div id='background'>
-	<div id='modal' class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div id='homeContainer'>
+		<div id='gridContainer'>
+			<div id="grid"></div>
+		</div>
+	</div>
+
+	
+
+
+
+	<div id='productModal'>
 		<div id='contentContainer'></div>
-		<!-- <div id='contentContainer' class="flipper"></div> -->
-		<!-- <div id='chatBoxContainer'></div> -->
-		<div class='closeModal'>
-			<span class='glyphicon glyphicon-remove'></span>
-		</div>
+		<div class='modalButtonBox'>
+    	<button value=0>Collab!</button>
+    	<button value=1>Like!</button>
+    	<button value=2>Purchase</button>
+    </div>
+		<div class='closeModal'><span class='glyphicon glyphicon-remove'></span></div>
 	</div>
-</div>
 
-
-
-
-
-
- 
-
-
+	<div id='chatModal'>
+		<div id='chatBoxContainer'></div>
+	</div>
 
 
 
@@ -77,22 +55,15 @@
 	<script type='text/javascript' src='js/productRender.js'></script>
 	<script type='text/javascript' src='js/productModel.js'></script>
 
+	<script type='text/javascript' src='js/productModalFunctions.js'></script>
+
 	<script id="entry-template" type="text/x-handlebars-template">
     <h1 class='productHeader'>{{product}}</h1>
-	<div class='flipper'>
-		<p class='productDes' , "front">{{description}}</p>
-	</div>
-	<!-- <p class='userBio' , "back">{{description}}</p> -->
-	<image src= {{{imageURL}}}></image>
+    <p class='productDes'>{{description}}</p>
 
-
-    <div class='modalButtonBox'>
-		<button>Bio/Project</button>
-    	<button>Collab!</button>
-    	<button>Like!</button>
-    	<button>Purchase</button>
-    </div>
+    <span id='identifier' data-id={{{id}}}></span>
 
 	</script>
+	
 </body>
 </html>

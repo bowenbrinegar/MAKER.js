@@ -1,21 +1,31 @@
-getProducts()
+getInventory()
+getPurchase()
 
-function getProducts() {
+function getInventory() {
 	$.ajax({
 		method: "GET",
-		url: "/market/send"
+		url: "/inventory-send"
 	}).done(function(data) {
-	  render(data)
+	  renderInventory(data)
+	});
+};
+
+function getPurchase() {
+	$.ajax({
+		method: "GET",
+		url: "/purchase-send"
+	}).done(function(data) {
+	  renderPurchases(data)
 	});
 };
 
 
-function render(data) {
-	$('tbody').empty()
+function renderInventory(data) {
+	$('#projects tbody').empty()
 	for (var i=0; i < data.length; i++) {
 
-		$('tbody').prepend(`<tr>
-													<td data-id='${data[i].id}'' contenteditable="true"></td>
+		$('#projects tbody').prepend(`<tr>
+													<td data-id='${data[i].id}' contenteditable="true"></td>
 													<td contenteditable="true"></td>
 													<td contenteditable="true"></td>
 													<td contenteditable="true"></td>
@@ -27,7 +37,7 @@ function render(data) {
 									        </td>
 												</tr>`);  
 
-      var firstRowTds = $("table")
+      var firstRowTds = $("#projects")
         .children()
         .eq(1)
         .children("tr")
@@ -40,6 +50,35 @@ function render(data) {
       firstRowTds.eq(3).text(data[i].cost);
 	};
 };
+
+
+function renderPurchases(data) {
+	$('#purchase tbody').empty()
+	for (var i=0; i < data.length; i++) {
+
+
+		$('#purchase tbody').prepend(`<tr>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>`);  
+
+      var firstRowTds = $("#purchase")
+        .children()
+        .eq(1)
+        .children("tr")
+        .eq(0)
+        .children("td");
+
+      firstRowTds.eq(0).text(data[i].Product.product);
+      firstRowTds.eq(1).text(data[i].Product.description);
+      firstRowTds.eq(2).text(data[i].Product.price);
+      firstRowTds.eq(3).text(data[i].Product.collab);
+	};
+};
+
+
 
 
 //on table change, grabs text content from inventory contenteditale td from tr
