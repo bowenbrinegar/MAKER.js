@@ -2,13 +2,64 @@ var db = require("./../models");
 
 module.exports = function(app, passport) {
 
+	// app.get('/getStats', function(req, res) {
+
+		
+
+	// 	db.Products.findAll({where: {UserId: req.user.id}
+	// 	}).then(data => {
+	// 		let total;
+	// 		let like;
+	// 		let collab;
+	// 		let comment;
+
+	// 		console.log("products", data.length)
+	// 		total = { amountOfProducts: data.length };
+
+	// 		let likeARR = []
+	// 		let collabARR = [];
+
+	// 		function add(a, b) {
+	// 		    return a + b;
+	// 		};
+
+	// 		for (var i=0; i < data.length; i++) {
+	// 			likeARR.push(data[i].like)
+	// 			collabARR.push(data[i].collab)
+	// 		};
+
+	// 		like = { amountOfLikes: likeARR.reduce(add, 0) };
+	// 		collab = { amountOfCollabs: collabARR.reduce(add, 0) };
+	// 			db.Comments.findAll({where: {UserId: req.user.id}
+	// 		}).then(data => {
+	// 			console.log("comments", data.length)
+	// 			comment = { amountOfComments: data.length };
+	// 			var obj = {
+	// 				amountOfProducts: total,
+	// 				amountOfLikes: like,
+	// 				amountOfCollabs: collab,
+	// 				amountOfComments: comment
+	// 			}
+	// 			res.send(obj)
+	// 		});
+			
+	// 	});
+
+		
+		
+	// 	console.log(total, like, collab, comment)
+	// 	console.log(obj)
+		
+
+	// });
+
 	app.get('/modal/send/:id', function(req, res) {
 		db.Products.findOne({ 
 			where: {id: req.params.id} 
 		}).then(data => {
 			res.send(data.dataValues)
-		})
-	})
+		});
+	});
 
 	app.get("/market/send", function(req, res) {
 		console.log("market loading")
@@ -40,7 +91,7 @@ module.exports = function(app, passport) {
 	app.put("/add-collab", function(req,res) {
 		db.Products.findOne({
 			where: {id: req.body.id}
-		}).done(data => {
+		}).then(data => {
 			let update = data.dataValues.collab + 1;
 			console.log(update);
 			db.Products.update(
@@ -54,7 +105,7 @@ module.exports = function(app, passport) {
 	app.put("/add-like", function(req,res) {
 		db.Products.findOne({
 			where: {id: req.body.id}
-		}).done(data => {
+		}).then(data => {
 			let update = data.dataValues.like + 1;
 			console.log(update);
 			db.Products.update(
