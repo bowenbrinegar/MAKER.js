@@ -1,6 +1,4 @@
 
-console.log('messages');
-
 //  newFlash function creates a new flash message, it takes in two parameters:
 //  flashType: 'success' or 'error'
 //  flashText: a string of the message to be displayed
