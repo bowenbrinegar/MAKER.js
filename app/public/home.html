@@ -14,7 +14,10 @@
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 	<!-- link to css -->
-	<link rel='stylesheet' type='text/css' href='css/style.css'>
+  <link rel='stylesheet' type='text/css' href='css/style.css'>
+  
+  <!-- Flash Messages -->
+  <link rel="stylesheet" type="text/css" href="css/flash.css" />
 
 </head>
 <body>
@@ -28,7 +31,9 @@
 			<a href='/' id='home'><img src="assets/home.png"></a>
 		</div>
 		
-	</div>
+  </div>
+  
+  <div class="inner"></div>
 
 	<div id='homeContainer'>
 		<div id='profileContainer'>
@@ -37,8 +42,8 @@
 
 		<div id='navContainer'>
 			<div class='homeDirectoryButtons' value=0>Market</div>
-			<div class='homeDirectoryButtons' value=1>Maker Space</div>
-			<div class='homeDirectoryButtons' value=2>Inventory</div>
+			<div class='homeDirectoryButtons' value=1 id="makerSpaceLink">Maker Space</div>
+			<div class='homeDirectoryButtons' value=2 id="inventoryLink">Inventory</div>
 		</div>
 
 		<div id='infoContainer'>
@@ -87,7 +92,7 @@
 	</div>
 
 
-
+  <script type="text/javascript" src="js/messages.js"></script>
 
 	<script type='text/javascript' src='js/homeAnimate.js'></script>
 
