@@ -6,13 +6,10 @@ $(document).ready(function() {
 $('#navContainer').on("click", "div", function() {
 	var v = $(this).attr("value")
 	console.log("value", v)
-	if (v==0) {window.location.assign('/market'); }
-	else if (v==1) { 
-    checkLogInStatus('/form'); }
-    // window.location.assign('/form'); }
-  else if (v==2) {
-    checkLogInStatus('/inventory'); }
-    // window.location.assign('/inventory'); }
+
+	if (v==0) { window.location.assign('/market'); }
+	else if (v==1) { window.location.assign('/form'); }
+	else if (v==2) { window.location.assign('/inventory'); }
 })
 
 
@@ -21,11 +18,13 @@ $('#navContainer').on("click", "div", function() {
 
 $('#infoContainer').hide()
 $('.main-carousel').hide()
+$('#profileJazz').hide()
 
 var turn = true;
 $('#selectProfile').on("click", function() {
 	if (turn) {
 		$('#profileContainer').animate({"width": "30%"});
+		$('#profileJazz').show()
 		$('#navContainer').animate({"left": "63%"});
 		$('#infoContainer').animate({"left": "63%"});
 		$('.main-carousel').animate({"width" : "650px", "left": "63%"})
@@ -34,6 +33,7 @@ $('#selectProfile').on("click", function() {
 		return
 	}
 	$('#profileContainer').animate({"width": "4%"});
+	$('#profileJazz').hide()
 	$('#navContainer').animate({"left": "50%"});
 	$('#infoContainer').animate({"left": "50%"});
 	$('.main-carousel').animate({"width" : "800px", "left": "50%"})
