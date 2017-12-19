@@ -7,7 +7,9 @@ $('#navContainer').on("click", "div", function() {
 	var v = $(this).attr("value")
 	console.log("value", v)
 	if (v==0) {window.location.assign('/market'); }
-	else if (v==1) { window.location.assign('/form'); }
+	else if (v==1) { 
+    checkLogInStatus('/form'); }
+    // window.location.assign('/form'); }
   else if (v==2) {
     checkLogInStatus('/inventory'); }
     // window.location.assign('/inventory'); }
