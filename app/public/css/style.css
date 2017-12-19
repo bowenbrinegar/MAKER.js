@@ -429,34 +429,28 @@ body {
   box-shadow: 0px 2px 114px -8px rgba(79,79,79,1);
 }
 
-/*#contentContainer {
+#contentContainer {
   position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
+  height: 350px;
   width: 100%;
-  height: 100%;
   background: rgba(0,0,0,.5);
-}*/
+}
 
 /*doug adds*/
 
 
-#cardBackground {
+/*#cardBackground {
   right: 5%;
   top: 5%;
-  height: 40%;
-  width:40%;
+  height: 100%;
+  width: 40%;
 }
-
-.userBioHeader {
+*/
+/*.userBioHeader {
   position: absolute;
-  /* right: 5%; */
-  /* top: 5%; */
   width: 100%;
   height: 60px;
   background: rgb(50, 50, 50);
-  /* background-image: */
   font-family: Alfa Slab One;
   text-decoration: underline;
   color: rgb(84, 237, 211);
@@ -464,21 +458,22 @@ body {
   -moz-box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
   box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
 }
-
+*/
 /*flip container*/
 
 .flip-container {
   position: absolute;
-  perspective: 1000px;
+  top: 13%;
+  perspective: 1000px; 
 }
 
 #flipCtl {
-    display: none;
+  display: none;
 }
 
 #flipBtn {
   width: 100%;
-  height: 480px;
+  height: 200px;
 }
 
 /* flip the pane when hovered */
@@ -488,16 +483,15 @@ body {
 }
 
 .flip-container, .front, .back {
-  /* width: 320px; */
   width: 100%;
-  height: 480px;
+  height: 200px;
 }
+
 
 /* flip speed goes here */
 .flipper {
   transition: 0.6s;
   transform-style: preserve-3d;
-
   position: relative;
 }
 
@@ -522,15 +516,15 @@ body {
   transform: rotateY(180deg);
 }
 
-#contentContainer {
+/*#contentContainer {
   position: absolute;
   left: 2%;
   top: 2%;
   bottom: 2%;
   z-index:100;
-  width: 65%;
+  width: 100%;
   /* background: rgb(100, 100, 100); */
-}
+}*/
 
 #contentContainer > h1 {
   padding-top: 10px;
@@ -539,12 +533,10 @@ body {
 
 .productHeader {
   position: absolute;
-  /* right: 5%; */
-  /* top: 5%; */
+  top: -4%;
   width: 100%;
   height: 60px;
   background: rgb(50, 50, 50);
-  /* background-image: */
   font-family: Alfa Slab One;
   text-decoration: underline;
   color: rgb(84, 237, 211);
@@ -561,7 +553,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
-  height: 320px;
+  height: 200px;
   background: rgba(250, 250, 250, 0.95);
   font-family: Bangla Sangam MN;
   color: rgb(0, 0, 0);
@@ -578,7 +570,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
-  height: 320px;
+  height: 200px;
   background: rgba(250, 250, 250, 0.95);
   font-family: Bangla Sangam MN;
   color: rgb(0, 0, 0);

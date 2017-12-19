@@ -63,6 +63,7 @@
 
 	<script id="entry-template" type="text/x-handlebars-template">
 		<h1 class='productHeader'>{{product}}</h1>
+		<span id='identifier' data-id={{{id}}}></span>
 		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 			<input type="checkbox" id="flipCtl"/>
 			<label id="flipBtn" for="flipCtl">
