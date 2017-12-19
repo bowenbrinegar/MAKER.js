@@ -1,5 +1,3 @@
-
-
 function getData(callback, second) {
 	$.ajax({
 		url: '/getStats',
@@ -24,11 +22,15 @@ getData(function(data) {
 	    return a + b;
 	};
 
-	console.log("product #", data.length) 
-	// console.log("# of comments", comments)
-	console.log(likeARR.reduce(add, 0), collabARR.reduce(add, 0))
+	var html = `<h1># of Products, ${data.length}</h1>
+				<h1># of Likes, ${likeARR.reduce(add, 0)}</h1>
+				<h1># of Collaborations, ${collabARR.reduce(add, 0)}</h1>`
+
+				$('#profileStats').append(html)
 }, function(data) {
-	console.log("comments", data.length)
+	var html = `<h1># of Comments, ${data.length}</h1>`
+
+				$('#profileStats').append(html)
 })
 
 
