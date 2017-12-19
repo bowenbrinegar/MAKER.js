@@ -1,4 +1,5 @@
 var path = require("path");
+var authController = require('../controllers/authController');
 
 module.exports = function(app) {
   app.get("/", function(req, res) {
@@ -13,11 +14,11 @@ module.exports = function(app) {
   	res.sendFile(path.join(__dirname, "../public/market.html"))
   })
 
-  app.get("/form", function(req, res) {
+  app.get("/form", authController.isLoggedIn, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/form.html"));
   });
 
-  app.get("/inventory", function(req, res) {
+  app.get("/inventory", authController.isLoggedIn, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/inventory.html"));
   });
 };

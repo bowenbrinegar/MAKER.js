@@ -3,7 +3,7 @@
     "username": "root",
     "password": "test",
     "database": "maker",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
@@ -14,10 +14,6 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "test",
-    "database": "maker",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "use_env_variable": "JAWSDB_URL"
   }
 }

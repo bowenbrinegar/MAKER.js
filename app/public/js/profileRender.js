@@ -1,3 +1,4 @@
+
 function getData(callback, second) {
 	$.ajax({
 		url: '/getStats',
@@ -33,10 +34,3 @@ getData(function(data) {
 				$('#profileStats').append(html)
 })
 
-
-
-
-	
-
-
-	
