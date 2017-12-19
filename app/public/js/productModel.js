@@ -14,6 +14,7 @@ function renderModal(data) {
 	$('#contentContainer').empty()
 	$('#productModal').css('display', 'block')
 	$('#chatModal').css('display', 'block')
+	$('#comments').empty()
 	var source   = document.getElementById("entry-template").innerHTML;
 	var template = Handlebars.compile(source);
 	var context = data
