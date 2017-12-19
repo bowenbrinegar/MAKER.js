@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "test",
+    "username": "gndaindfmajp8bt7",
+    "password": "p460mrvu5vo9nh2c",
     "database": "maker",
-    "host": "127.0.0.1",
+    "host": "ol5tz0yvwp930510.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
