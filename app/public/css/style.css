@@ -207,6 +207,76 @@ body {
 }
 
 
+.profStatBox {
+    width: 100%;
+    height: 120px;
+    padding-left: 10px;
+}
+
+#profStat {
+    float: left;
+    margin: 16px 3px;
+    width: 61px;
+}
+
+#profStat > h3, #profStat > h2 {
+    float: left;
+    margin: 3px 3px;
+}
+
+#profStat > h3 {
+    font-family: 'Fjalla One', sans-serif;
+    writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+    font-size: 30px;
+    margin-left: 9px;
+}
+
+#profStat > h2 {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    height: 50px;
+    text-align: center;
+    line-height: 2.3;
+    width: 50px;
+    font-size: 20px;
+}
+/*https://codepen.io/jamesbarnett/pen/kfmKa*/
+.marquee {
+    position: absolute;
+    bottom: 5%;
+    height: 60px;
+    width: 100%;
+    font-family: 'Righteous', cursive;
+    font-size: 50px;
+    overflow: hidden;
+}
+
+.marquee div {
+    display: block;
+    width: 200%;
+    height: 60px;
+
+    position: absolute;
+    overflow: hidden;
+
+    animation: marquee 5s linear infinite;
+}
+
+.marquee span {
+    float: left;
+    width: 50%;
+}
+
+@keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+}
+
+
+
 #navContainer {
   position: absolute;
   -webkit-transform: translate(-50%,-50%);

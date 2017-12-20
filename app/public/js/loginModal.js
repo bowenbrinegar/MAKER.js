@@ -26,61 +26,52 @@ var registerHtml = `
           <input type="submit" class="btn btn-lg btn-block btn-warning" value="Register ->"/>
         </form>`
 
-
 registerRender()
 
-$('#key').on("click", function() {
-	if (turn) {
-		$('#loginModal').css("display", "block");
-		turn = !turn;
-		return
-	}
-	$('#loginModal').css("display", "none");
-	turn = !turn;
-})
-	
-$('#loginButton').on("click", function() {
-	loginRender()
+$('#key').on('click', function () {
+  if (turn) {
+    $('#loginModal').css('display', 'block')
+    turn = !turn
+    return
+  }
+  $('#loginModal').css('display', 'none')
+  turn = !turn
 })
 
-$('#registerButton').on("click", function() {
-	registerRender()
-})  
+$('#loginButton').on('click', function () {
+  loginRender()
+})
 
+$('#registerButton').on('click', function () {
+  registerRender()
+})
 
-function registerRender() {
-	$('#formContainer').empty()
-	$('#formContainer').append(registerHtml)
-	$('#registerButton').css({"background": "rgba(0,0,0,.75)", "color": "white"})  
-	$('#loginButton').css({"background": "rgb(84, 237, 211)"}) 
-	$('#loginModal').css({"height": "500px"})
-	$("#loginButton").hover(function(){
-	  $(this).addClass('hover');
-	}, function(){
-	  $(this).removeClass('hover');
-	});
-	$('#registerButton').off('mouseenter mouseleave')
-	$('#registerButton').removeClass('hover');
+function registerRender () {
+  $('#formContainer').empty()
+  $('#formContainer').append(registerHtml)
+  $('#registerButton').css({'background': 'rgba(0,0,0,.75)', 'color': 'white'})
+  $('#loginButton').css({'background': 'rgb(84, 237, 211)'})
+  $('#loginModal').css({'height': '500px'})
+  $('#loginButton').hover(function () {
+	  $(this).addClass('hover')
+  }, function () {
+	  $(this).removeClass('hover')
+  })
+  $('#registerButton').off('mouseenter mouseleave')
+  $('#registerButton').removeClass('hover')
 }
 
-function loginRender() {
-	$('#formContainer').empty()
-	$('#formContainer').append(loginHtml)
-	$('#registerButton').css({"background": "rgb(84, 237, 211)"})
-	$('#loginButton').css({"background": "rgba(0,0,0,.75)", "color": "white"}) 
-	$('#loginModal').css({"height": "338px"})
-	$("#registerButton").hover(function(){
-	  $(this).addClass('hover');
-	}, function(){
-	  $(this).removeClass('hover');
-	});
-	$('#loginButton').off('mouseenter mouseleave')
-	$('#loginButton').removeClass('hover');
+function loginRender () {
+  $('#formContainer').empty()
+  $('#formContainer').append(loginHtml)
+  $('#registerButton').css({'background': 'rgb(84, 237, 211)'})
+  $('#loginButton').css({'background': 'rgba(0,0,0,.75)', 'color': 'white'})
+  $('#loginModal').css({'height': '338px'})
+  $('#registerButton').hover(function () {
+	  $(this).addClass('hover')
+  }, function () {
+	  $(this).removeClass('hover')
+  })
+  $('#loginButton').off('mouseenter mouseleave')
+  $('#loginButton').removeClass('hover')
 }
-
-
-
-
-
-
-
