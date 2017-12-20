@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6687f220-7dc2-4a02-8493-a0b5d6b02b5e" name="Default" comment="profile stats up">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,52 +19,14 @@
     <favorites_list name="MAKEfriends" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.52294374">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="productModel.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/public/js/productModel.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="64" column="19" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="productModalFunctions.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/public/js/productModalFunctions.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="apiRoutes.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/routes/apiRoutes.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="79" column="32" lean-forward="true" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>productHe</find>
       <find>user</find>
       <find>commentli</find>
+      <find>productDe</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -86,12 +47,12 @@
         <option value="$PROJECT_DIR$/app/public/js/flipBackStats.js" />
         <option value="$PROJECT_DIR$/app/public/market.html" />
         <option value="$PROJECT_DIR$/app/public/js/productModel.js" />
-        <option value="$PROJECT_DIR$/app/public/js/chat.js" />
         <option value="$PROJECT_DIR$/app/public/js/inventoryRender.js" />
         <option value="$PROJECT_DIR$/app/public/home.html" />
         <option value="$PROJECT_DIR$/app/public/js/profileRender.js" />
-        <option value="$PROJECT_DIR$/app/public/css/style.css" />
         <option value="$PROJECT_DIR$/app/public/js/productModalFunctions.js" />
+        <option value="$PROJECT_DIR$/app/public/css/style.css" />
+        <option value="$PROJECT_DIR$/app/public/js/chat.js" />
         <option value="$PROJECT_DIR$/app/routes/apiRoutes.js" />
       </list>
     </option>
@@ -107,11 +68,11 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="6" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1499" />
     <option name="y" value="23" />
-    <option name="width" value="1434" />
-    <option name="height" value="877" />
+    <option name="width" value="1730" />
+    <option name="height" value="1029" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -203,6 +164,7 @@
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="standardjs.codestyle.accepted" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="commentLik&#9;null&#9;null" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -252,7 +214,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513724686591</updated>
-      <workItem from="1513724688433" duration="20318000" />
+      <workItem from="1513724688433" duration="23048000" />
     </task>
     <task id="LOCAL-00001" summary="progress commit, changes some color to match scheme, div resize, other additions">
       <created>1513730642633</created>
@@ -282,11 +244,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513794545839</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="profile stats up">
+      <created>1513808581114</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1513808581114</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20318000" />
+    <option name="totallyTimeSpent" value="23048000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -298,16 +267,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="23" width="1434" height="877" extended-state="1" />
+    <frame x="1499" y="23" width="1730" height="1029" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977304" sideWeight="0.49714285" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280363" sideWeight="0.49772468" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48415717" sideWeight="0.51046026" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17109458" sideWeight="0.5098266" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31432194" sideWeight="0.4944212" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48415717" sideWeight="0.48953974" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19456068" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" x="80" y="73" width="350" height="749" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17109458" sideWeight="0.4901734" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16127168" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" x="80" y="73" width="350" height="749" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33783785" sideWeight="0.7211155" order="2" side_tool="false" content_ui="tabs" />
@@ -350,9 +319,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="progress commit, changes some color to match scheme, div resize, other additions" />
     <MESSAGE value="updated css" />
-    <MESSAGE value="profile stats up" />
     <MESSAGE value="issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="issues" />
+    <MESSAGE value="profile stats up" />
+    <option name="LAST_COMMIT_MESSAGE" value="profile stats up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -429,10 +398,10 @@
         <state relative-caret-position="344">
           <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
           <folding>
-            <marker date="1513787660000" expanded="true" signature="464:892" ph="..." />
-            <marker date="1513787660000" expanded="true" signature="670:754" ph="..." />
-            <marker date="1513787660000" expanded="true" signature="780:878" ph="..." />
-            <marker date="1513787660000" expanded="true" signature="1351:1461" ph="..." />
+            <marker date="1513803649000" expanded="true" signature="464:892" ph="..." />
+            <marker date="1513803649000" expanded="true" signature="670:754" ph="..." />
+            <marker date="1513803649000" expanded="true" signature="780:878" ph="..." />
+            <marker date="1513803649000" expanded="true" signature="1351:1461" ph="..." />
           </folding>
         </state>
       </provider>
@@ -493,30 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/js/chat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/market.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-412">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="14" lean-forward="false" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/public/js/productRender.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-85">
@@ -529,26 +474,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/js/productModalFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/public/js/productModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="1088">
           <caret line="64" column="19" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/js/productModalFunctions.js">
+    <entry file="file://$PROJECT_DIR$/app/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        <state relative-caret-position="159">
+          <caret line="860" column="1" lean-forward="false" selection-start-line="860" selection-start-column="1" selection-end-line="860" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/js/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="38" column="17" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+          <folding>
+            <marker date="1513808794000" expanded="true" signature="707:886" ph="..." />
+            <marker date="1513808794000" expanded="true" signature="707:886" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/market.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes/apiRoutes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="79" column="32" lean-forward="true" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+        <state relative-caret-position="295">
+          <caret line="107" column="5" lean-forward="false" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
           <folding />
         </state>
       </provider>

@@ -138,7 +138,8 @@ module.exports = function (app) {
       product: req.body.product,
       parts: {parts: req.body.parts},
       price: req.body.price,
-      cost: req.body.cost },
+      cost: req.body.cost,
+      description: req.body.description },
     { where: {id: req.body.id} }
     ).then(data => {
       res.send("success")

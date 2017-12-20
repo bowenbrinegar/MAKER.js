@@ -91,6 +91,7 @@ $(document).ready(function () {
       parts: partsARR,
       price: arr[2],
       cost: arr[3],
+      description: arr[4],
       id: arr[5]
     }
     $.ajax({
