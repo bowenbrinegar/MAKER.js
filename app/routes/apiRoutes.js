@@ -84,6 +84,7 @@ module.exports = function (app) {
     console.log('post working')
     db.Comments.create({
       comment: req.body.comment,
+      like: 0,
       ProductId: req.body.ProductId,
       UserId: req.user.id
     }).then(data => {
@@ -95,21 +96,15 @@ module.exports = function (app) {
     db.Comments.findAll({
       where: { ProductId: req.params.pid},
       include: db.Users
-    }).done(data => {
+    }).then(data => {
       console.log(data)
       res.send(data)
     })
   })
 
   app.put('/comment-like', function (req, res) {
-    var likeCount = 0
-    db.Comments.findOne({ where: {id: req.body.commentId}
-    }).then(data => {
-      likeCount = data.like
-    })
-    db.Comments.update({like: likeCount + 1},
-      {where: {id: req.body.commentId}}).then(data => {
-      res.send('success')
+    db.Comments.increment('like', {where: {id: req.body.commentId}}).then(data => {
+      res.send("success")
     })
   })
 
