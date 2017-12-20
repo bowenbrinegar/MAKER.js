@@ -60,17 +60,23 @@ module.exports = function (app) {
   })
 
   app.put('/add-collab', function (req, res) {
-    db.Products.increment('collab', {where: {id: req.body.id}})
+    db.Products.increment('collab', {where: {id: req.body.id}}).then(data => {
+      res.send("success")
+    })
   })
 
   app.put('/add-like', function (req, res) {
-    db.Products.increment('like', {where: {id: req.body.id}})
+    db.Products.increment('like', {where: {id: req.body.id}}).then(data => {
+      res.send("success")
+    })
   })
 
   app.post('/add-purchase', function (req, res) {
     db.Purchases.create({
       ProductId: req.body.id,
       UserId: req.user.id
+    }).then(data => {
+      res.send("success")
     })
   })
 
@@ -80,7 +86,7 @@ module.exports = function (app) {
       comment: req.body.comment,
       ProductId: req.body.ProductId,
       UserId: req.user.id
-    }).done(data => {
+    }).then(data => {
       res.send('success')
     })
   })
@@ -98,11 +104,11 @@ module.exports = function (app) {
   app.put('/comment-like', function (req, res) {
     var likeCount = 0
     db.Comments.findOne({ where: {id: req.body.commentId}
-    }).done(data => {
+    }).then(data => {
       likeCount = data.like
     })
     db.Comments.update({like: likeCount + 1},
-      {where: {id: req.body.commentId}}).done(data => {
+      {where: {id: req.body.commentId}}).then(data => {
       res.send('success')
     })
   })
@@ -139,12 +145,16 @@ module.exports = function (app) {
       price: req.body.price,
       cost: req.body.cost },
     { where: {id: req.body.id} }
-    ).then(res)
+    ).then(data => {
+      res.send("success")
+    })
   })
 
   app.delete('/inventory/delete/row', function (req, res) {
     db.Products.destroy({
       where: {id: req.body.id }
+    }).then(data => {
+      res.send("success")
     })
   })
 }
