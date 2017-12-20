@@ -5,16 +5,16 @@ $('#commentInput').on("submit", function(evt) {
 	let data =	{ 
 		ProductId: $('#identifier').attr("data-id"),
 		comment: $('#commentInput input').val() 
-	}
+	};
 	$.ajax({
 		url: '/comment-post',
 		type: 'POST',
 		data: data
 	}).done(data => {
 		fetchComments()
-	})
+	};)
 	$('#commentInput input').val('')
-})
+});
 
 function fetchComments() {
 	$.ajax({
@@ -22,18 +22,19 @@ function fetchComments() {
 		type: 'GET'
 	}).done(data => {
 		renderComments(data)
-	})
+	};)
 
 }
 
 function renderComments(data) {
-	console.log(data)
+	console.log(data);
+	$('#comments').empty();
 	for (var i=0; i < data.length; i++) {
 		var html = `<div>
-									<h5 class='username'>${data[i].User.name}</h5>
-									<h3 class='commentLoad'>${data[i].comment}</h3>
-									<button id='commentLike' data-id='${data[i].id}'>like</button>
-								</div>`
+						<h5 class='username'>${data[i].User.name}</h5>
+						<h3 class='commentLoad'>${data[i].comment}</h3>
+						<button id='commentLike' data-id='${data[i].id}'>like</button>
+					</div>`;
 		$('#comments').prepend(html)
 	}
 }
@@ -41,7 +42,7 @@ function renderComments(data) {
 
 
 $('#comments').on("click", "button", function() {
-	let obj = { commentId: $(this).attr("data-id") }
+	let obj = { commentId: $(this).attr("data-id") };
 	$.ajax({
 		url: '/comment-like',
 		type: 'PUT',
@@ -49,7 +50,7 @@ $('#comments').on("click", "button", function() {
 	}).done(data => {
 		fetchComments();
 	})
-})
+});
 
 
 

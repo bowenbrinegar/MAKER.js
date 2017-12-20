@@ -589,9 +589,9 @@ body {
   position: relative;
   top: 20%;
   right: 0;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 20px;
   width: 100%;
   height: 200px;
   background: rgba(250, 250, 250, 0.95);
@@ -602,6 +602,47 @@ body {
   box-shadow: 13px 11px 17px -4px rgba(0,0,0,0.55);
 }
 
+.userBio > h1 {
+    background: rgb(84, 237, 211);
+    color: rgba(0,0,0,.75);
+    width: 81px;
+    height: 28px;
+    font-size: 26px;
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    line-height: 1.1;
+    float: right;
+    margin-top: 45px;
+}
+
+#pStat {
+    float: left;
+    margin: 0px 5px;
+    width: 78px;
+}
+
+#pStat > h3, #pStat > h2 {
+    float: left;
+    margin: 10px 3px;
+}
+
+#pStat > h3 {
+    font-family: 'Fjalla One', sans-serif;
+    writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+}
+
+#pStat > h2 {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    height: 40px;
+    text-align: center;
+    line-height: 2.3;
+    width: 40px;
+    font-size: 20px;
+}
 
 .modalButtonBox {
   position: absolute;
@@ -732,7 +773,8 @@ body {
 
 #commentLike {
   border-radius: 3px;
-  background: red;
+  background: #953bc5;
+    border: none;
   color: white;
   float: right;
   margin: 23px;
