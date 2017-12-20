@@ -77,6 +77,7 @@ function renderPurchases (data) {
 // pushes content into array
 
 $(document).ready(function () {
+  
   $(document).on('click', '.glyphicon-plus', function () {
     var arr = []
     var temp = $(this).parent('td').parent('tr').children('td')

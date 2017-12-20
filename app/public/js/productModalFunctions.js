@@ -1,38 +1,36 @@
-$(document).ready(function () {
+
+
   $('.modalButtonBox').on('click', 'button', function () {
-    var val = $(this).attr('value')
-    var id = { id: $('#identifier').attr('data-id') }
-    if (val == 0) { collab(id) } else if (val == 1) { like(id) } else if (val == 2) { purchase(id) }
+    let val = $(this).attr('value');
+    let id = { id: $('#identifier').attr('data-id') }
+    if (val == 0) { collab(id, getFlipStats()) } else if (val == 1) { like(id, getFlipStats()) } else if (val == 2) { purchase(id, getFlipStats()) }
   })
 
-  function collab (id) {
+  function collab (id, callback) {
     $.ajax({
       type: 'PUT',
       url: '/add-collab',
-      data: id
-    }).done(data => {
-      console.log('collab success')
+      data: id,
+        success: callback
     })
-    getFlipStats()
   }
 
-  function like (id) {
+  function like (id, callback) {
     $.ajax({
       type: 'PUT',
       url: '/add-like',
-      data: id
-    }).done(data => {
-      console.log('like success')
+      data: id,
+        success: callback
     })
-    getFlipStats()
   }
 
-  function purchase (id) {
+  function purchase (id, callback) {
     $.ajax({
       type: 'POST',
       url: '/add-purchase',
-      data: id
+      data: id,
+        success: callback
     })
-    getFlipStats()
+
   }
-})
+

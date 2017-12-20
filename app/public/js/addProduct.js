@@ -22,8 +22,10 @@ $(document).ready(function () {
 
     for (var i = 0; i < arr.length; i++) {
       var text = $(`<span>${arr[i]}</span>`)
-      var check = $(`<div>`).addClass('check').append(text).append(`<span class="glyphicon glyphicon-ok"></span>`)
-      var box = $(`<div data-tool="${arr[i]}">`).addClass('parts-item').css('background', color()).append(text).append(check)
+      var check = $(`<div>`).addClass('check').append(text)
+                  .append(`<span class="glyphicon glyphicon-ok"></span>`)
+      var box = $(`<div data-tool="${arr[i]}">`).addClass('parts-item')
+                .css('background', color()).append(text).append(check)
       $('#partsGrid').append(box)
       $('#partsGrid').masonry('appended', box)
     }

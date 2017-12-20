@@ -60,31 +60,11 @@ module.exports = function (app) {
   })
 
   app.put('/add-collab', function (req, res) {
-    db.Products.findOne({
-      where: {id: req.body.id}
-    }).then(data => {
-      let update = data.dataValues.collab + 1
-      console.log(update)
-      db.Products.update(
-        { collab: update },
-	      { where: {id: req.body.id} }).done(data => {
-	      	console.log(data)
-	      })
-    })
+    db.Products.increment('collab', {where: {id: req.body.id}})
   })
 
   app.put('/add-like', function (req, res) {
-    db.Products.findOne({
-      where: {id: req.body.id}
-    }).then(data => {
-      let update = data.dataValues.like + 1
-      console.log(update)
-      db.Products.update(
-        { like: update },
-	      { where: {id: req.body.id} }).done(data => {
-	      	console.log(data)
-	      })
-    })
+    db.Products.increment('like', {where: {id: req.body.id}})
   })
 
   app.post('/add-purchase', function (req, res) {
