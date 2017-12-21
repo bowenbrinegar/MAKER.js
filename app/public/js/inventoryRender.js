@@ -77,22 +77,23 @@ function renderPurchases (data) {
 // pushes content into array
 
 $(document).ready(function () {
-  
   $(document).on('click', '.glyphicon-plus', function () {
     var arr = []
     var temp = $(this).parent('td').parent('tr').children('td')
-    for (var i = 0; i < temp.length - 1; i++) {
+    console.log(temp.eq(4))
+    for (var i = 0; i < temp.length - 2; i++) {
       arr.push(temp[i].textContent)
     }
     arr.push(temp.eq(0).attr('data-id'))
+    console.log("descrip", arr)
     var partsARR = arr[1].split(',')
     var obj = {
       product: arr[0],
       parts: partsARR,
       price: arr[2],
       cost: arr[3],
-      description: arr[4],
-      id: arr[5]
+      description: arr[1],
+      id: arr[4]
     }
     $.ajax({
       method: 'PUT',
