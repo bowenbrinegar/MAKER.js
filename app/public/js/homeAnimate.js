@@ -7,9 +7,6 @@ $(document).ready(function () {
     if (v == 0) { window.location.assign('/market') } else if (v == 1) { window.location.assign('/form') } else if (v == 2) { window.location.assign('/inventory') }
   })
 
-  $('#infoContainer').hide()
-  $('.main-carousel').hide()
-  $('#profileJazz').hide()
 
   var turn = true
   $('#selectProfile').on('click', function () {
@@ -62,7 +59,11 @@ $(document).ready(function () {
       count++
     } else if (count == 1) {
       $('#infoContainer').hide()
-      $('.main-carousel').show()
+      $('.main-carousel').css("display", "block")
+      $('.main-carousel').flickity({
+        wrapAround: true,
+        autoPlay: 2000
+      });
       count++
     }
     console.log('down', count)
