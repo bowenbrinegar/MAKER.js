@@ -18,7 +18,7 @@ function getProducts () {
 
 $('#grid').masonry({
   itemSelector: '.grid-item',
- 	columnWidth: 200
+ 	columnWidth: 200,
 })
 
 // doug product cards

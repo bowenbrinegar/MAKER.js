@@ -3,7 +3,6 @@ $('#grid').on('click', '.grid-item', function () {
     type: 'GET',
     url: '/modal/send/' + $(this).attr('data-id')
   }).done(data => {
-    console.log('ajax')
     renderModal(data)
   })
 })
@@ -13,7 +12,6 @@ function getFlipStats () {
     url: '/p-like-collab/' + $('#identifier').attr('data-id'),
     type: 'GET'
   }).done(data => {
-  	console.log(data)
   	  $('.likeStat').text(data.like)
 	  $('.collabStat').text(data.collab)
     $('.purchaseStat').text(data.Purchases.length)
@@ -22,7 +20,6 @@ function getFlipStats () {
 
 var turn = true
 function renderModal (data) {
-  console.log('render')
   $('#contentContainer').empty()
   $('#productModal').css('display', 'block')
   $('#chatModal').css('display', 'block')

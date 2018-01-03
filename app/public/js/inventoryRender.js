@@ -80,12 +80,10 @@ $(document).ready(function () {
   $(document).on('click', '.glyphicon-plus', function () {
     var arr = []
     var temp = $(this).parent('td').parent('tr').children('td')
-    console.log(temp.eq(4))
     for (var i = 0; i < temp.length - 2; i++) {
       arr.push(temp[i].textContent)
     }
     arr.push(temp.eq(0).attr('data-id'))
-    console.log("descrip", arr)
     var partsARR = arr[1].split(',')
     var obj = {
       product: arr[0],

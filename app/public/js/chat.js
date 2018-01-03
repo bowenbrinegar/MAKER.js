@@ -27,7 +27,6 @@ function fetchComments () {
 }
 
 function renderComments (data) {
-  console.log(data)
   $('#comments').empty()
   for (var i = 0; i < data.length; i++) {
     var html = `<div>

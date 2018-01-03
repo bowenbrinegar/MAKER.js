@@ -66,6 +66,5 @@ $(document).ready(function () {
       });
       count++
     }
-    console.log('down', count)
   })
 })
