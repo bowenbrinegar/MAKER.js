@@ -1,13 +1,12 @@
 # Maker.js
 
+Please check out the app yourself at (https://intense-hollows-42739.herokuapp.com/)
 
 ## Overview
 
 Maker.js is a web app for makers to post and collaborate on projects. They can showcase to the world the various projects they are working on as well as they can work with other makers to bring their ideas to fruition.
 
 ![Maker.js Homepage][home] 
-
-
 
 With Maker.js, makers now have a single place to work with other makers and to tell the world about their creations.
 
