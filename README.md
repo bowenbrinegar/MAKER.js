@@ -45,6 +45,7 @@ When logged in, your profile will show in the left side bar and will display how
 - Survey.js
 - jQuery
 - Masonry
+- Flickity
 
 ### The Team
 - Bo Slott - [GitHub](https://github.com/boslott)
