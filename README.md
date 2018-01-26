@@ -20,7 +20,7 @@ The market is the central hub for all projects currently going on. This is the a
 
 The Maker Space is where you go to begin / showcase a project. First choose which tools you need for your project.
 
-![Project description and upload page][makerSpace2]
+![alt text](https://preview.ibb.co/b3NcGw/Screen_Shot_2018_01_25_at_10_15_16_PM.png)
 
 Then, fill out the create form with the details of your project to then have it posted in the market.
 
