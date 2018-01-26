@@ -54,7 +54,7 @@ When logged in, your profile will show in the left side bar and will display how
 - Express / Node
 - Passport.js
 - Survey.js
-- Client-side Handlebars.js
+- Handlebars.js (Client-side) 
 - jQuery
 - Masonry
 - Flickity
