@@ -24,15 +24,26 @@ The Maker Space is where you go to begin / showcase a project. First choose whic
 
 Then, fill out the create form with the details of your project to then have it posted in the market.
 
+
+### Market
+
+![alt text](https://preview.ibb.co/hmcoOb/Screen_Shot_2018_01_25_at_9_55_17_PM.png)
+
+### Market Stats
+
+![alt text](https://preview.ibb.co/dJzw9G/Screen_Shot_2018_01_25_at_9_55_27_PM.png)
+
+### Inventory
+
+![alt text](https://preview.ibb.co/mZW4ww/Screen_Shot_2018_01_25_at_9_59_26_PM.png)
+
 ### Registration / Login
 
 Anyone can view the market, but only those logged in can create and post new projects. Registration is easy and only takes a sec.
 
-![registration][register] ![login][login]
+![alt text](https://preview.ibb.co/esFxGw/Screen_Shot_2018_01_25_at_10_13_07_PM.png)
 
 ### Profile
-
-![Profile][profile]
 
 When logged in, your profile will show in the left side bar and will display how many products you have, likes, collabs, and number of comments you've left.
 
