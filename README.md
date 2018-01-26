@@ -16,7 +16,7 @@ The market is the central hub for all projects currently going on. This is the a
 
 ### Maker Space
 
-![Maker Space page][makerSpace]
+![alt text](https://preview.ibb.co/fuXxib/Screen_Shot_2018_01_25_at_9_58_25_PM.png)
 
 The Maker Space is where you go to begin / showcase a project. First choose which tools you need for your project.
 
@@ -55,11 +55,9 @@ When logged in, your profile will show in the left side bar and will display how
 
 
 
-[home]:https://image.ibb.co/driiLR/Screen_Shot_2017_12_20_at_1_54_59_PM.png 
+[home]:https://preview.ibb.co/mBe7Gw/Screen_Shot_2018_01_25_at_9_54_46_PM.png
 
 [flickity]: https://image.ibb.co/mWYiLR/Screen_Shot_2017_12_20_at_1_57_17_PM.png
-
-[makerSpace]: http://image.ibb.co/fuXxib/Screen_Shot_2018_01_25_at_9_58_25_PM.png
 
 [login]: https://image.ibb.co/cfZOLR/Screen_Shot_2017_12_20_at_1_59_19_PM.png
 
