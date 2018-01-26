@@ -59,7 +59,7 @@ When logged in, your profile will show in the left side bar and will display how
 
 [flickity]: https://image.ibb.co/mWYiLR/Screen_Shot_2017_12_20_at_1_57_17_PM.png
 
-[makerSpace]: https://image.ibb.co/kz2on6/Screen_Shot_2017_12_20_at_2_00_30_PM.png
+[makerSpace]: http://ibb.co/hhYRbw
 
 [login]: https://image.ibb.co/cfZOLR/Screen_Shot_2017_12_20_at_1_59_19_PM.png
 
