@@ -1,8 +1,21 @@
 # Maker.js
 
-Please check out the app yourself at (https://intense-hollows-42739.herokuapp.com/)
+Please check out the app yourself on Heroku! (https://intense-hollows-42739.herokuapp.com/)
 
 ## Overview
+
+Maker.js is a fully functional Node.js and Express app. It uses the CRUD model and SQL databases. The goal of the project was to create a rough draft of a social network for "Makers", Designers, and Entrepreneurs alike.
+
+## Features
+
+#### * Add products and designs, and pick out tools in a Pinterest like selection system
+#### * Create accounts and Login in from anywhere, we keep your information Private
+#### * Comment, Collab, and Purchase with products from other people
+#### * Get stats in your profile on how your products are doing
+#### * Update your products in Inventory and look at your Purchase History
+#### * View highlighted projects and see instructions on how to use the App
+
+## Mission Statement
 
 Maker.js is a web app for makers to post and collaborate on projects. They can showcase to the world the various projects they are working on as well as they can work with other makers to bring their ideas to fruition.
 
